@@ -34,9 +34,9 @@ public class Classifier {
 	 private static JSONArray result;
 	 private static FileReader file;
 	 private static File selectedFile;
-//	 public static PrintWriter log;
-//	 public static SimpleDateFormat date;
-//	 public static Date time;
+	 public static PrintWriter log;
+	 public static SimpleDateFormat date;
+	 public static Date time;
 	public static Window gui_frame;
 	public static String[] categories = {"Art and Artists","Media","Biography","Comedy","Conspiracy","Crime","Drugs","Military and War","Politics","Psychology",
 		"Environment","Nature","Health","Society","Philosophy","Mystery","Religion","Economics","History","Science","Technology",
@@ -64,18 +64,13 @@ public class Classifier {
 		}
 	}
 	
+	public static String getTime(){
+		date = new SimpleDateFormat ("yyyy/MM/dd '-' hh:mm:ss");
+		time = new Date();
+		return date.format(time);
+	}
+	
 	public static void classify() throws FileNotFoundException, IOException, ParseException{
-		//initialize log file
-		/*String fileName = gui_frame.getName() + ".log";
-		log = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
-		
-		log.println(getTime() + " initialized log file");
-		
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		log.println(getTime() + " Screen resoluton: " +screenSize.getWidth()+" x "+screenSize.getHeight());
-		
-		log.println(getTime() + " set name: " +gui_frame.getName());*/
-		
 		parser = new JSONParser();
 		
 		//select input file
@@ -87,10 +82,19 @@ public class Classifier {
 	    
 	    //load user name
 	    Window.loadUserName();
+	    
+	    //initialize log file
+	  	String fileName = gui_frame.getName() + ".log";
+	  	log = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
+	  	log.println(getTime() + " initialized log file");
+	  		
+	  	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	  	log.println("screen resoluton: " +screenSize.getWidth()+" x "+screenSize.getHeight());
+	  	log.println("set name: " +gui_frame.getName());
         
 		
 		file = new FileReader(path);
-//		log.println(getTime() + " selected source file: " + selectedFile.getName());
+		log.println("selected source file: " + selectedFile.getName());
 		
 		data = (JSONArray) parser.parse(file);
 		
@@ -102,10 +106,14 @@ public class Classifier {
 		
 		parseMovie(0);
 		
-//		log.println(getTime() + " Screen offset: " + gui_frame.getBounds());
-//		gui_frame.logButtonPositions();
-//		gui_frame.logLabelPositions();
-//		gui_frame.logCategoryPositions();
+		gui_frame.validate();
+		gui_frame.logPanelPostiions();
+		gui_frame.logButtonPositions();
+		gui_frame.logLabelPositions();
+		gui_frame.logCategoryPositions();
+		gui_frame.logImdbTitle();
+		gui_frame.logcsfdTitle();
+		gui_frame.logDescription();
 //		gui_frame.logTextPositions();
 	}
 	
@@ -131,7 +139,7 @@ public class Classifier {
 		
 		next += 1;
 			
-//		log.println(getTime() + " displayed content of movie ID=" +id );
+		log.println(getTime() + " displayed content of movie ID=" +id );
 	}
 	
 	@SuppressWarnings("unchecked")

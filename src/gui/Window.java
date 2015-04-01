@@ -12,6 +12,7 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -94,6 +95,15 @@ public class Window extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeButtonState(index);
+				Classifier.log.println(Classifier.getTime() + " Clicked radio button - category: " + group.get(index).getText());
+				String new_state;
+				switch(states[index]){
+				case 0: new_state = "deselected"; break;
+				case 1: new_state = "primary category"; break;
+				case 2: new_state = "secondary category"; break;
+				default: new_state = "";
+				}
+				Classifier.log.println(Classifier.getTime() + " category " +group.get(index).getText() + " set as " +new_state);
 			}
 		});
 		group.add(button);
@@ -125,16 +135,6 @@ public class Window extends JFrame {
 			}
 		}
 		return null;
-	}
-	
-	public void logTitle(){
-		this.validate();
-		System.out.println("contentpane: " + contentPane.getBounds());
-		System.out.println("leftpane: " + leftPane.getBounds());
-		System.out.println("imdbtitle: " + imdbTitle.getBounds());
-		for(int i=0; i<3; i++){
-			System.out.println(imdbTitleList.get(i).getBounds());
-		}
 	}
 	
 	public void clearContent(){
@@ -222,7 +222,7 @@ public class Window extends JFrame {
 	    resLabel.setFont(MsgFont);
 	    jopt.showMessageDialog( null, resLabel, "Results", JOptionPane.PLAIN_MESSAGE );
 	    
-	    //Classifier.log.println(Classifier.getTime() + " Displayed primary category message dialog warning");
+	    Classifier.log.println(Classifier.getTime() + " Displayed primary category message dialog warning");
 		
 		return false;
 	}
@@ -244,7 +244,7 @@ public class Window extends JFrame {
 	    resLabel.setFont(MsgFont);
 	    jopt.showMessageDialog( null, resLabel, "Results", JOptionPane.PLAIN_MESSAGE );
 	    
-	    //Classifier.log.println(Classifier.getTime() + " Displayed secondary category message dialog warning");
+	    Classifier.log.println(Classifier.getTime() + " Displayed secondary category message dialog warning");
 	    
 		return false;
 	}
@@ -260,6 +260,67 @@ public class Window extends JFrame {
 	public static void loadUserName(){
 		String str = JOptionPane.showInputDialog("Please insert your name: ");
 		name = str.replaceAll("\\s+","");
+	}
+	
+	public void logPanelPostiions(){		
+		Classifier.log.println("panel positions:");
+		Classifier.log.println(this.getBounds() + " - frame");
+		Classifier.log.println(contentPane.getBounds() + " - contentPane");
+		Classifier.log.println(leftPane.getBounds() + " - leftPane");
+		Classifier.log.println(rightPane.getBounds() + " - rightPane");
+		Classifier.log.println(imdbTitle.getBounds() + " - imdbTitle panel");
+		Classifier.log.println(csfdTitle.getBounds() + " - csfdTitle panel");
+		Classifier.log.println(description.getBounds() + " - description panel");
+		Classifier.log.println(footer.getBounds() + " - footer panel");
+	}
+	
+	public void logButtonPositions(){
+		Classifier.log.println(Classifier.getTime() + " Button positions:");
+		Classifier.log.println(next.getBounds() + " - next");
+	}
+	
+	public void logLabelPositions(){
+		Classifier.log.println(Classifier.getTime() + " Label positions:");
+		Classifier.log.println(imdbTitleLabel.getBounds() + " - imdb title label");
+		Classifier.log.println(csfdTitleLabel.getBounds() + " - csfd title label");
+		Classifier.log.println(descriptionLabel.getBounds() + " - description label");
+		Classifier.log.println(id.getBounds() + " - id label");
+	}
+	
+	public void logCategoryPositions(){
+		Classifier.log.println(Classifier.getTime() + " Category positions:");
+		rightPane.validate();
+		
+		for(int i=0; i<Classifier.CATEGORY_COUNT; i++){					
+			Classifier.log.println(group.get(i).getBounds() + " - " + group.get(i).getText());
+		}
+	}
+	
+	public void logImdbTitle(){
+		imdbTitle.validate();
+		Classifier.log.println(Classifier.getTime() + " IMDB Title text positions:");
+		int size = imdbTitleList.size();
+		for(int i=0; i<size; i++){
+			Classifier.log.println(imdbTitleList.get(i).getBounds() + " - " + imdbTitleList.get(i).getText());
+		}
+	}
+	
+	public void logcsfdTitle(){
+		csfdTitle.validate();
+		Classifier.log.println(Classifier.getTime() + " CSFD Title text positions:");
+		int size = csfdTitleList.size();
+		for(int i=0; i<size; i++){
+			Classifier.log.println(csfdTitleList.get(i).getBounds() + " - " + csfdTitleList.get(i).getText());
+		}
+	}
+	
+	public void logDescription(){
+		description.validate();
+		Classifier.log.println(Classifier.getTime() + " Description text positions:");
+		int size = descriptionList.size();
+		for(int i=0; i<size; i++){
+			Classifier.log.println(descriptionList.get(i).getBounds() + " - " + descriptionList.get(i).getText());
+		}
 	}
 
 	/**
@@ -359,6 +420,8 @@ public class Window extends JFrame {
 		next.setBorder(new EmptyBorder(10,50,10,50));
 		next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Classifier.log.println(Classifier.getTime() + " clicked button Next");
+				
 				if(checkValidity()){
 					Classifier.addResult(Classifier.next - 1);
 					int next = Classifier.next + 1;
@@ -366,6 +429,8 @@ public class Window extends JFrame {
 					if(next > Classifier.COUNT){
 						try {
 							Classifier.saveResult();
+							Classifier.log.println(Classifier.getTime() + " Application finished");
+							Classifier.log.close();
 						} catch (IOException e1) {
 							e1.printStackTrace();
 						}
@@ -382,11 +447,26 @@ public class Window extends JFrame {
 					} catch (IOException | ParseException e1) {
 						e1.printStackTrace();
 					}
+					
+					validate();
+					logPanelPostiions();
+					logButtonPositions();
+					logLabelPositions();
+					logImdbTitle();
+					logcsfdTitle();
+					logDescription();
 				}
 				
 			}
 		});
 		footer.add(next);
+		
+		this.addWindowListener(new java.awt.event.WindowAdapter(){
+			public void windowClosing(WindowEvent winEv){
+				Classifier.log.println(Classifier.getTime() + " Application closed");
+				Classifier.log.close();
+			}
+		});	
 	}
 
 }

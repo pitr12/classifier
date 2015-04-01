@@ -1,0 +1,1182 @@
+2015/04/01 - 03:49:52 initialized log file
+screen resoluton: 1920.0 x 1080.0
+set name: peter
+selected source file: 1_10.json
+2015/04/01 - 03:49:52 displayed content of movie ID=1
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:49:52 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:49:52 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:49:52 Category positions:
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Housing
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Catastriphic
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Art and Artists
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Adventure
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Comedy
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Nature
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Technology
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Psychology
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Drugs
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - History
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Science
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Culture
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Geography
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Media
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Animals
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Politics
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Economics
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Crime
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Conspiracy
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Environment
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Nothing
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Traveling
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Religion
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Biography
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Health
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Society
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Mystery
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Military and War
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Sports
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Philosophy
+2015/04/01 - 03:49:52 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=108,height=35] - Príchod
+java.awt.Rectangle[x=118,y=5,width=80,height=35] - vlaku
+java.awt.Rectangle[x=203,y=5,width=38,height=35] - do
+java.awt.Rectangle[x=246,y=5,width=108,height=35] - stanice
+java.awt.Rectangle[x=359,y=5,width=38,height=35] - La
+java.awt.Rectangle[x=402,y=5,width=94,height=35] - Ciotat
+2015/04/01 - 03:49:52 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=108,height=35] - Arrivée
+java.awt.Rectangle[x=118,y=5,width=66,height=35] - d'un
+java.awt.Rectangle[x=189,y=5,width=80,height=35] - train
+java.awt.Rectangle[x=274,y=5,width=24,height=35] - à
+java.awt.Rectangle[x=303,y=5,width=38,height=35] - la
+java.awt.Rectangle[x=346,y=5,width=108,height=35] - Ciotat,
+java.awt.Rectangle[x=459,y=5,width=38,height=35] - L'
+2015/04/01 - 03:49:52 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=24,height=35] - A
+java.awt.Rectangle[x=34,y=5,width=80,height=35] - group
+java.awt.Rectangle[x=119,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=162,y=5,width=94,height=35] - people
+java.awt.Rectangle[x=261,y=5,width=52,height=35] - are
+java.awt.Rectangle[x=318,y=5,width=122,height=35] - standing
+java.awt.Rectangle[x=445,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=488,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=517,y=5,width=122,height=35] - straight
+java.awt.Rectangle[x=644,y=5,width=66,height=35] - line
+java.awt.Rectangle[x=715,y=5,width=80,height=35] - along
+java.awt.Rectangle[x=800,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=45,width=122,height=35] - platform
+java.awt.Rectangle[x=132,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=175,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=204,y=45,width=108,height=35] - railway
+java.awt.Rectangle[x=317,y=45,width=122,height=35] - station,
+java.awt.Rectangle[x=444,y=45,width=108,height=35] - waiting
+java.awt.Rectangle[x=557,y=45,width=52,height=35] - for
+java.awt.Rectangle[x=614,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=643,y=45,width=94,height=35] - train,
+java.awt.Rectangle[x=742,y=45,width=80,height=35] - which
+java.awt.Rectangle[x=827,y=45,width=38,height=35] - is
+java.awt.Rectangle[x=5,y=85,width=66,height=35] - seen
+java.awt.Rectangle[x=76,y=85,width=94,height=35] - coming
+java.awt.Rectangle[x=175,y=85,width=38,height=35] - at
+java.awt.Rectangle[x=218,y=85,width=66,height=35] - some
+java.awt.Rectangle[x=289,y=85,width=136,height=35] - distance.
+java.awt.Rectangle[x=430,y=85,width=66,height=35] - When
+java.awt.Rectangle[x=501,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=558,y=85,width=80,height=35] - train
+java.awt.Rectangle[x=643,y=85,width=80,height=35] - stops
+java.awt.Rectangle[x=728,y=85,width=38,height=35] - at
+java.awt.Rectangle[x=771,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=125,width=136,height=35] - platform,
+java.awt.Rectangle[x=146,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=203,y=125,width=66,height=35] - line
+java.awt.Rectangle[x=274,y=125,width=150,height=35] - dissolves.
+java.awt.Rectangle[x=429,y=125,width=52,height=35] - The
+java.awt.Rectangle[x=486,y=125,width=80,height=35] - doors
+java.awt.Rectangle[x=571,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=614,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=671,y=125,width=178,height=35] - railway-cars
+java.awt.Rectangle[x=5,y=165,width=80,height=35] - open,
+java.awt.Rectangle[x=90,y=165,width=52,height=35] - and
+java.awt.Rectangle[x=147,y=165,width=94,height=35] - people
+java.awt.Rectangle[x=246,y=165,width=38,height=35] - on
+java.awt.Rectangle[x=289,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=346,y=165,width=122,height=35] - platform
+java.awt.Rectangle[x=473,y=165,width=66,height=35] - help
+java.awt.Rectangle[x=544,y=165,width=150,height=35] - passengers
+java.awt.Rectangle[x=699,y=165,width=38,height=35] - to
+java.awt.Rectangle[x=742,y=165,width=52,height=35] - get
+java.awt.Rectangle[x=799,y=165,width=66,height=35] - off.
+2015/04/01 - 03:49:54 Clicked radio button - category: Housing
+2015/04/01 - 03:49:54 category Housing set as primary category
+2015/04/01 - 03:49:56 clicked button Next
+2015/04/01 - 03:49:56 displayed content of movie ID=2
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:49:56 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:49:56 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:49:56 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=38,height=35] - La
+java.awt.Rectangle[x=48,y=5,width=94,height=35] - Sortie
+java.awt.Rectangle[x=147,y=5,width=38,height=35] - de
+java.awt.Rectangle[x=190,y=5,width=108,height=35] - l'Usine
+java.awt.Rectangle[x=303,y=5,width=108,height=35] - Lumière
+java.awt.Rectangle[x=416,y=5,width=24,height=35] - à
+java.awt.Rectangle[x=445,y=5,width=66,height=35] - Lyon
+java.awt.Rectangle[x=516,y=5,width=52,height=35] - (le
+java.awt.Rectangle[x=573,y=5,width=108,height=35] - Premier
+java.awt.Rectangle[x=686,y=5,width=80,height=35] - Film)
+2015/04/01 - 03:49:56 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=94,height=35] - Sortie
+java.awt.Rectangle[x=104,y=5,width=52,height=35] - des
+java.awt.Rectangle[x=161,y=5,width=94,height=35] - usines
+java.awt.Rectangle[x=260,y=5,width=122,height=35] - Lumière,
+java.awt.Rectangle[x=387,y=5,width=38,height=35] - La
+2015/04/01 - 03:49:56 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=24,height=35] - A
+java.awt.Rectangle[x=34,y=5,width=52,height=35] - man
+java.awt.Rectangle[x=91,y=5,width=80,height=35] - opens
+java.awt.Rectangle[x=176,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=233,y=5,width=52,height=35] - big
+java.awt.Rectangle[x=290,y=5,width=80,height=35] - gates
+java.awt.Rectangle[x=375,y=5,width=38,height=35] - to
+java.awt.Rectangle[x=418,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=475,y=5,width=108,height=35] - Lumière
+java.awt.Rectangle[x=588,y=5,width=122,height=35] - factory.
+java.awt.Rectangle[x=715,y=5,width=108,height=35] - Through
+java.awt.Rectangle[x=828,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=45,width=108,height=35] - gateway
+java.awt.Rectangle[x=118,y=45,width=52,height=35] - and
+java.awt.Rectangle[x=175,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=204,y=45,width=108,height=35] - smaller
+java.awt.Rectangle[x=317,y=45,width=108,height=35] - doorway
+java.awt.Rectangle[x=430,y=45,width=94,height=35] - beside
+java.awt.Rectangle[x=529,y=45,width=52,height=35] - it,
+java.awt.Rectangle[x=586,y=45,width=108,height=35] - workers
+java.awt.Rectangle[x=699,y=45,width=52,height=35] - are
+java.awt.Rectangle[x=756,y=45,width=136,height=35] - streaming
+java.awt.Rectangle[x=5,y=85,width=66,height=35] - out,
+java.awt.Rectangle[x=76,y=85,width=108,height=35] - turning
+java.awt.Rectangle[x=189,y=85,width=94,height=35] - either
+java.awt.Rectangle[x=288,y=85,width=66,height=35] - left
+java.awt.Rectangle[x=359,y=85,width=38,height=35] - or
+java.awt.Rectangle[x=402,y=85,width=94,height=35] - right.
+java.awt.Rectangle[x=501,y=85,width=66,height=35] - Most
+java.awt.Rectangle[x=572,y=85,width=38,height=35] - of
+java.awt.Rectangle[x=615,y=85,width=66,height=35] - them
+java.awt.Rectangle[x=686,y=85,width=52,height=35] - are
+java.awt.Rectangle[x=743,y=85,width=80,height=35] - women
+java.awt.Rectangle[x=828,y=85,width=38,height=35] - in
+java.awt.Rectangle[x=5,y=125,width=66,height=35] - long
+java.awt.Rectangle[x=76,y=125,width=108,height=35] - dresses
+java.awt.Rectangle[x=189,y=125,width=52,height=35] - and
+java.awt.Rectangle[x=246,y=125,width=52,height=35] - big
+java.awt.Rectangle[x=303,y=125,width=80,height=35] - hats,
+java.awt.Rectangle[x=388,y=125,width=52,height=35] - but
+java.awt.Rectangle[x=445,y=125,width=66,height=35] - some
+java.awt.Rectangle[x=516,y=125,width=52,height=35] - are
+java.awt.Rectangle[x=573,y=125,width=66,height=35] - men.
+java.awt.Rectangle[x=644,y=125,width=122,height=35] - Suddenly
+java.awt.Rectangle[x=771,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=800,y=125,width=52,height=35] - man
+java.awt.Rectangle[x=5,y=165,width=66,height=35] - with
+java.awt.Rectangle[x=76,y=165,width=24,height=35] - a
+java.awt.Rectangle[x=105,y=165,width=66,height=35] - long
+java.awt.Rectangle[x=176,y=165,width=80,height=35] - apron
+java.awt.Rectangle[x=261,y=165,width=94,height=35] - rushes
+java.awt.Rectangle[x=360,y=165,width=52,height=35] - out
+java.awt.Rectangle[x=417,y=165,width=108,height=35] - through
+java.awt.Rectangle[x=530,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=587,y=165,width=94,height=35] - crowd,
+java.awt.Rectangle[x=686,y=165,width=122,height=35] - followed
+java.awt.Rectangle[x=813,y=165,width=38,height=35] - by
+java.awt.Rectangle[x=856,y=165,width=24,height=35] - a
+java.awt.Rectangle[x=5,y=205,width=52,height=35] - big
+java.awt.Rectangle[x=62,y=205,width=66,height=35] - dog.
+java.awt.Rectangle[x=133,y=205,width=38,height=35] - At
+java.awt.Rectangle[x=176,y=205,width=66,height=35] - last
+java.awt.Rectangle[x=247,y=205,width=66,height=35] - some
+java.awt.Rectangle[x=318,y=205,width=52,height=35] - men
+java.awt.Rectangle[x=375,y=205,width=38,height=35] - on
+java.awt.Rectangle[x=418,y=205,width=80,height=35] - bikes
+java.awt.Rectangle[x=503,y=205,width=80,height=35] - leave
+java.awt.Rectangle[x=588,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=645,y=205,width=122,height=35] - gateway.
+java.awt.Rectangle[x=772,y=205,width=66,height=35] - When
+java.awt.Rectangle[x=843,y=205,width=52,height=35] - all
+java.awt.Rectangle[x=5,y=245,width=108,height=35] - workers
+java.awt.Rectangle[x=118,y=245,width=66,height=35] - have
+java.awt.Rectangle[x=189,y=245,width=66,height=35] - left
+java.awt.Rectangle[x=260,y=245,width=52,height=35] - the
+java.awt.Rectangle[x=317,y=245,width=122,height=35] - factory,
+java.awt.Rectangle[x=444,y=245,width=52,height=35] - the
+java.awt.Rectangle[x=501,y=245,width=150,height=35] - doorkeeper
+java.awt.Rectangle[x=656,y=245,width=94,height=35] - starts
+java.awt.Rectangle[x=755,y=245,width=108,height=35] - closing
+java.awt.Rectangle[x=5,y=285,width=52,height=35] - the
+java.awt.Rectangle[x=62,y=285,width=80,height=35] - gates
+java.awt.Rectangle[x=147,y=285,width=94,height=35] - again.
+2015/04/01 - 03:49:56 clicked button Next
+2015/04/01 - 03:49:59 Displayed primary category message dialog warning
+2015/04/01 - 03:50:00 Clicked radio button - category: Art and Artists
+2015/04/01 - 03:50:00 category Art and Artists set as primary category
+2015/04/01 - 03:50:01 clicked button Next
+2015/04/01 - 03:50:01 displayed content of movie ID=3
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:01 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:01 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:01 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=80,height=35] - Repas
+java.awt.Rectangle[x=90,y=5,width=38,height=35] - de
+java.awt.Rectangle[x=133,y=5,width=66,height=35] - bébé
+2015/04/01 - 03:50:01 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=80,height=35] - Repas
+java.awt.Rectangle[x=90,y=5,width=38,height=35] - de
+java.awt.Rectangle[x=133,y=5,width=66,height=35] - bébé
+2015/04/01 - 03:50:01 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=24,height=35] - A
+java.awt.Rectangle[x=34,y=5,width=66,height=35] - baby
+java.awt.Rectangle[x=105,y=5,width=38,height=35] - is
+java.awt.Rectangle[x=148,y=5,width=94,height=35] - seated
+java.awt.Rectangle[x=247,y=5,width=38,height=35] - at
+java.awt.Rectangle[x=290,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=319,y=5,width=80,height=35] - table
+java.awt.Rectangle[x=404,y=5,width=108,height=35] - between
+java.awt.Rectangle[x=517,y=5,width=52,height=35] - its
+java.awt.Rectangle[x=574,y=5,width=122,height=35] - cheerful
+java.awt.Rectangle[x=701,y=5,width=122,height=35] - parents,
+java.awt.Rectangle[x=5,y=45,width=108,height=35] - Auguste
+java.awt.Rectangle[x=118,y=45,width=52,height=35] - and
+java.awt.Rectangle[x=175,y=45,width=150,height=35] - Marguerite
+java.awt.Rectangle[x=330,y=45,width=122,height=35] - Lumière.
+java.awt.Rectangle[x=457,y=45,width=80,height=35] - While
+java.awt.Rectangle[x=542,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=599,y=45,width=94,height=35] - father
+java.awt.Rectangle[x=698,y=45,width=38,height=35] - is
+java.awt.Rectangle[x=741,y=45,width=108,height=35] - feeding
+java.awt.Rectangle[x=854,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=85,width=66,height=35] - baby
+java.awt.Rectangle[x=76,y=85,width=66,height=35] - with
+java.awt.Rectangle[x=147,y=85,width=24,height=35] - a
+java.awt.Rectangle[x=176,y=85,width=94,height=35] - spoon,
+java.awt.Rectangle[x=275,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=332,y=85,width=94,height=35] - mother
+java.awt.Rectangle[x=431,y=85,width=38,height=35] - is
+java.awt.Rectangle[x=474,y=85,width=108,height=35] - pouring
+java.awt.Rectangle[x=587,y=85,width=94,height=35] - coffee
+java.awt.Rectangle[x=686,y=85,width=66,height=35] - into
+java.awt.Rectangle[x=757,y=85,width=52,height=35] - her
+java.awt.Rectangle[x=814,y=85,width=66,height=35] - cup.
+java.awt.Rectangle[x=5,y=125,width=52,height=35] - The
+java.awt.Rectangle[x=62,y=125,width=94,height=35] - father
+java.awt.Rectangle[x=161,y=125,width=80,height=35] - gives
+java.awt.Rectangle[x=246,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=303,y=125,width=66,height=35] - baby
+java.awt.Rectangle[x=374,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=403,y=125,width=122,height=35] - biscuit,
+java.awt.Rectangle[x=530,y=125,width=80,height=35] - which
+java.awt.Rectangle[x=615,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=672,y=125,width=66,height=35] - baby
+java.awt.Rectangle[x=743,y=125,width=94,height=35] - grabs,
+java.awt.Rectangle[x=842,y=125,width=52,height=35] - but
+java.awt.Rectangle[x=5,y=165,width=108,height=35] - doesn't
+java.awt.Rectangle[x=118,y=165,width=66,height=35] - eat,
+java.awt.Rectangle[x=189,y=165,width=122,height=35] - although
+java.awt.Rectangle[x=316,y=165,width=66,height=35] - both
+java.awt.Rectangle[x=387,y=165,width=108,height=35] - parents
+java.awt.Rectangle[x=500,y=165,width=136,height=35] - encourage
+java.awt.Rectangle[x=641,y=165,width=52,height=35] - it.
+java.awt.Rectangle[x=698,y=165,width=52,height=35] - The
+java.awt.Rectangle[x=755,y=165,width=94,height=35] - father
+java.awt.Rectangle[x=5,y=205,width=108,height=35] - resumes
+java.awt.Rectangle[x=118,y=205,width=108,height=35] - feeding
+java.awt.Rectangle[x=231,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=288,y=205,width=66,height=35] - baby
+java.awt.Rectangle[x=359,y=205,width=66,height=35] - with
+java.awt.Rectangle[x=430,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=487,y=205,width=94,height=35] - spoon.
+2015/04/01 - 03:50:02 Clicked radio button - category: Comedy
+2015/04/01 - 03:50:02 category Comedy set as primary category
+2015/04/01 - 03:50:03 clicked button Next
+2015/04/01 - 03:50:03 displayed content of movie ID=4
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:03 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:03 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:03 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=150,height=35] - Démolition
+java.awt.Rectangle[x=160,y=5,width=66,height=35] - d'un
+java.awt.Rectangle[x=231,y=5,width=52,height=35] - mur
+2015/04/01 - 03:50:03 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=150,height=35] - Démolition
+java.awt.Rectangle[x=160,y=5,width=66,height=35] - d'un
+java.awt.Rectangle[x=231,y=5,width=52,height=35] - mur
+2015/04/01 - 03:50:03 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=108,height=35] - Auguste
+java.awt.Rectangle[x=118,y=5,width=108,height=35] - Lumière
+java.awt.Rectangle[x=231,y=5,width=108,height=35] - directs
+java.awt.Rectangle[x=344,y=5,width=66,height=35] - four
+java.awt.Rectangle[x=415,y=5,width=108,height=35] - workers
+java.awt.Rectangle[x=528,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=571,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=628,y=5,width=150,height=35] - demolition
+java.awt.Rectangle[x=783,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=826,y=5,width=38,height=35] - an
+java.awt.Rectangle[x=5,y=45,width=52,height=35] - old
+java.awt.Rectangle[x=62,y=45,width=66,height=35] - wall
+java.awt.Rectangle[x=133,y=45,width=38,height=35] - at
+java.awt.Rectangle[x=176,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=233,y=45,width=108,height=35] - Lumière
+java.awt.Rectangle[x=346,y=45,width=122,height=35] - factory.
+java.awt.Rectangle[x=473,y=45,width=52,height=35] - One
+java.awt.Rectangle[x=530,y=45,width=94,height=35] - worker
+java.awt.Rectangle[x=629,y=45,width=38,height=35] - is
+java.awt.Rectangle[x=672,y=45,width=122,height=35] - pressing
+java.awt.Rectangle[x=799,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=85,width=66,height=35] - wall
+java.awt.Rectangle[x=76,y=85,width=108,height=35] - inwards
+java.awt.Rectangle[x=189,y=85,width=66,height=35] - with
+java.awt.Rectangle[x=260,y=85,width=24,height=35] - a
+java.awt.Rectangle[x=289,y=85,width=150,height=35] - jackscrew,
+java.awt.Rectangle[x=444,y=85,width=80,height=35] - while
+java.awt.Rectangle[x=529,y=85,width=108,height=35] - another
+java.awt.Rectangle[x=642,y=85,width=38,height=35] - is
+java.awt.Rectangle[x=685,y=85,width=108,height=35] - pushing
+java.awt.Rectangle[x=798,y=85,width=38,height=35] - it
+java.awt.Rectangle[x=841,y=85,width=66,height=35] - with
+java.awt.Rectangle[x=5,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=34,y=125,width=80,height=35] - pick.
+java.awt.Rectangle[x=119,y=125,width=66,height=35] - When
+java.awt.Rectangle[x=190,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=247,y=125,width=66,height=35] - wall
+java.awt.Rectangle[x=318,y=125,width=66,height=35] - hits
+java.awt.Rectangle[x=389,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=446,y=125,width=108,height=35] - ground,
+java.awt.Rectangle[x=559,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=588,y=125,width=80,height=35] - cloud
+java.awt.Rectangle[x=673,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=716,y=125,width=80,height=35] - white
+java.awt.Rectangle[x=801,y=125,width=66,height=35] - dust
+java.awt.Rectangle[x=5,y=165,width=94,height=35] - whirls
+java.awt.Rectangle[x=104,y=165,width=52,height=35] - up.
+java.awt.Rectangle[x=161,y=165,width=80,height=35] - Three
+java.awt.Rectangle[x=246,y=165,width=108,height=35] - workers
+java.awt.Rectangle[x=359,y=165,width=122,height=35] - continue
+java.awt.Rectangle[x=486,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=543,y=165,width=150,height=35] - demolition
+java.awt.Rectangle[x=698,y=165,width=38,height=35] - of
+java.awt.Rectangle[x=741,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=798,y=165,width=66,height=35] - wall
+java.awt.Rectangle[x=5,y=205,width=66,height=35] - with
+java.awt.Rectangle[x=76,y=205,width=94,height=35] - picks.
+2015/04/01 - 03:50:05 Clicked radio button - category: Technology
+2015/04/01 - 03:50:05 category Technology set as primary category
+2015/04/01 - 03:50:06 clicked button Next
+2015/04/01 - 03:50:06 displayed content of movie ID=5
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:06 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:06 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:06 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=192,height=35] - Electrocuting
+java.awt.Rectangle[x=202,y=5,width=38,height=35] - an
+java.awt.Rectangle[x=245,y=5,width=122,height=35] - Elephant
+2015/04/01 - 03:50:06 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=192,height=35] - Electrocuting
+java.awt.Rectangle[x=202,y=5,width=38,height=35] - an
+java.awt.Rectangle[x=245,y=5,width=122,height=35] - Elephant
+2015/04/01 - 03:50:06 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=52,height=35] - The
+java.awt.Rectangle[x=62,y=5,width=136,height=35] - execution
+java.awt.Rectangle[x=203,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=246,y=5,width=94,height=35] - Topsy,
+java.awt.Rectangle[x=345,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=374,y=5,width=94,height=35] - female
+java.awt.Rectangle[x=473,y=5,width=136,height=35] - elephant,
+java.awt.Rectangle[x=614,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=657,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=686,y=5,width=136,height=35] - publicity
+java.awt.Rectangle[x=827,y=5,width=80,height=35] - stunt
+java.awt.Rectangle[x=5,y=45,width=164,height=35] - advertising
+java.awt.Rectangle[x=174,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=231,y=45,width=108,height=35] - opening
+java.awt.Rectangle[x=344,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=387,y=45,width=66,height=35] - Luna
+java.awt.Rectangle[x=458,y=45,width=66,height=35] - Park
+java.awt.Rectangle[x=529,y=45,width=38,height=35] - on
+java.awt.Rectangle[x=572,y=45,width=80,height=35] - Coney
+java.awt.Rectangle[x=657,y=45,width=108,height=35] - Island.
+java.awt.Rectangle[x=770,y=45,width=80,height=35] - Topsy
+java.awt.Rectangle[x=855,y=45,width=52,height=35] - was
+java.awt.Rectangle[x=5,y=85,width=150,height=35] - originally
+java.awt.Rectangle[x=160,y=85,width=80,height=35] - owned
+java.awt.Rectangle[x=245,y=85,width=38,height=35] - by
+java.awt.Rectangle[x=288,y=85,width=136,height=35] - Forepaugh
+java.awt.Rectangle[x=429,y=85,width=94,height=35] - Circus
+java.awt.Rectangle[x=528,y=85,width=80,height=35] - where
+java.awt.Rectangle[x=613,y=85,width=52,height=35] - she
+java.awt.Rectangle[x=670,y=85,width=94,height=35] - killed
+java.awt.Rectangle[x=769,y=85,width=24,height=35] - a
+java.awt.Rectangle[x=798,y=85,width=108,height=35] - drunken
+java.awt.Rectangle[x=5,y=125,width=136,height=35] - spectator
+java.awt.Rectangle[x=146,y=125,width=52,height=35] - who
+java.awt.Rectangle[x=203,y=125,width=94,height=35] - burned
+java.awt.Rectangle[x=302,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=359,y=125,width=52,height=35] - tip
+java.awt.Rectangle[x=416,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=459,y=125,width=52,height=35] - her
+java.awt.Rectangle[x=516,y=125,width=80,height=35] - trunk
+java.awt.Rectangle[x=601,y=125,width=66,height=35] - with
+java.awt.Rectangle[x=672,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=701,y=125,width=94,height=35] - cigar.
+java.awt.Rectangle[x=800,y=125,width=52,height=35] - She
+java.awt.Rectangle[x=5,y=165,width=52,height=35] - was
+java.awt.Rectangle[x=62,y=165,width=66,height=35] - sold
+java.awt.Rectangle[x=133,y=165,width=38,height=35] - to
+java.awt.Rectangle[x=176,y=165,width=52,height=35] - Sea
+java.awt.Rectangle[x=233,y=165,width=66,height=35] - Lion
+java.awt.Rectangle[x=304,y=165,width=66,height=35] - Park
+java.awt.Rectangle[x=375,y=165,width=38,height=35] - in
+java.awt.Rectangle[x=418,y=165,width=66,height=35] - 1902
+java.awt.Rectangle[x=489,y=165,width=80,height=35] - which
+java.awt.Rectangle[x=574,y=165,width=52,height=35] - was
+java.awt.Rectangle[x=631,y=165,width=66,height=35] - then
+java.awt.Rectangle[x=702,y=165,width=66,height=35] - sold
+java.awt.Rectangle[x=773,y=165,width=38,height=35] - to
+java.awt.Rectangle[x=816,y=165,width=52,height=35] - new
+java.awt.Rectangle[x=5,y=205,width=94,height=35] - owners
+java.awt.Rectangle[x=104,y=205,width=52,height=35] - who
+java.awt.Rectangle[x=161,y=205,width=94,height=35] - turned
+java.awt.Rectangle[x=260,y=205,width=38,height=35] - it
+java.awt.Rectangle[x=303,y=205,width=66,height=35] - into
+java.awt.Rectangle[x=374,y=205,width=66,height=35] - Luna
+java.awt.Rectangle[x=445,y=205,width=80,height=35] - Park.
+java.awt.Rectangle[x=530,y=205,width=80,height=35] - After
+java.awt.Rectangle[x=615,y=205,width=66,height=35] - they
+java.awt.Rectangle[x=686,y=205,width=108,height=35] - decided
+java.awt.Rectangle[x=799,y=205,width=66,height=35] - they
+java.awt.Rectangle[x=5,y=245,width=80,height=35] - could
+java.awt.Rectangle[x=90,y=245,width=38,height=35] - no
+java.awt.Rectangle[x=133,y=245,width=94,height=35] - longer
+java.awt.Rectangle[x=232,y=245,width=94,height=35] - handle
+java.awt.Rectangle[x=331,y=245,width=66,height=35] - her,
+java.awt.Rectangle[x=402,y=245,width=52,height=35] - the
+java.awt.Rectangle[x=459,y=245,width=94,height=35] - owners
+java.awt.Rectangle[x=558,y=245,width=38,height=35] - of
+java.awt.Rectangle[x=601,y=245,width=66,height=35] - Luna
+java.awt.Rectangle[x=672,y=245,width=66,height=35] - Park
+java.awt.Rectangle[x=743,y=245,width=136,height=35] - announced
+java.awt.Rectangle[x=5,y=285,width=66,height=35] - they
+java.awt.Rectangle[x=76,y=285,width=80,height=35] - would
+java.awt.Rectangle[x=161,y=285,width=66,height=35] - hang
+java.awt.Rectangle[x=232,y=285,width=94,height=35] - Topsy,
+java.awt.Rectangle[x=331,y=285,width=108,height=35] - leading
+java.awt.Rectangle[x=444,y=285,width=38,height=35] - to
+java.awt.Rectangle[x=487,y=285,width=38,height=35] - an
+java.awt.Rectangle[x=530,y=285,width=94,height=35] - outcry
+java.awt.Rectangle[x=629,y=285,width=38,height=35] - by
+java.awt.Rectangle[x=672,y=285,width=52,height=35] - the
+java.awt.Rectangle[x=729,y=285,width=94,height=35] - ASPCA.
+java.awt.Rectangle[x=828,y=285,width=52,height=35] - The
+java.awt.Rectangle[x=5,y=325,width=94,height=35] - owners
+java.awt.Rectangle[x=104,y=325,width=66,height=35] - then
+java.awt.Rectangle[x=175,y=325,width=108,height=35] - decided
+java.awt.Rectangle[x=288,y=325,width=66,height=35] - they
+java.awt.Rectangle[x=359,y=325,width=80,height=35] - would
+java.awt.Rectangle[x=444,y=325,width=164,height=35] - electrocute
+java.awt.Rectangle[x=613,y=325,width=52,height=35] - the
+java.awt.Rectangle[x=670,y=325,width=136,height=35] - elephant,
+java.awt.Rectangle[x=811,y=325,width=66,height=35] - with
+java.awt.Rectangle[x=882,y=325,width=24,height=35] - a
+java.awt.Rectangle[x=5,y=365,width=94,height=35] - backup
+java.awt.Rectangle[x=104,y=365,width=66,height=35] - plan
+java.awt.Rectangle[x=175,y=365,width=38,height=35] - of
+java.awt.Rectangle[x=218,y=365,width=108,height=35] - feeding
+java.awt.Rectangle[x=331,y=365,width=52,height=35] - her
+java.awt.Rectangle[x=388,y=365,width=192,height=35] - cyanide-laced
+java.awt.Rectangle[x=585,y=365,width=108,height=35] - carrots
+java.awt.Rectangle[x=698,y=365,width=52,height=35] - and
+java.awt.Rectangle[x=755,y=365,width=150,height=35] - strangling
+java.awt.Rectangle[x=5,y=405,width=52,height=35] - her
+java.awt.Rectangle[x=62,y=405,width=66,height=35] - with
+java.awt.Rectangle[x=133,y=405,width=24,height=35] - a
+java.awt.Rectangle[x=162,y=405,width=94,height=35] - cable.
+2015/04/01 - 03:50:07 Clicked radio button - category: Technology
+2015/04/01 - 03:50:07 category Technology set as primary category
+2015/04/01 - 03:50:08 clicked button Next
+2015/04/01 - 03:50:08 displayed content of movie ID=6
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:08 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:08 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:08 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=66,height=35] - Life
+java.awt.Rectangle[x=76,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=119,y=5,width=38,height=35] - an
+java.awt.Rectangle[x=162,y=5,width=122,height=35] - American
+java.awt.Rectangle[x=289,y=5,width=108,height=35] - Fireman
+2015/04/01 - 03:50:08 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=66,height=35] - Life
+java.awt.Rectangle[x=76,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=119,y=5,width=38,height=35] - an
+java.awt.Rectangle[x=162,y=5,width=122,height=35] - American
+java.awt.Rectangle[x=289,y=5,width=108,height=35] - Fireman
+2015/04/01 - 03:50:08 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=122,height=35] - Porter's
+java.awt.Rectangle[x=132,y=5,width=150,height=35] - sequential
+java.awt.Rectangle[x=287,y=5,width=150,height=35] - continuity
+java.awt.Rectangle[x=442,y=5,width=108,height=35] - editing
+java.awt.Rectangle[x=555,y=5,width=80,height=35] - links
+java.awt.Rectangle[x=640,y=5,width=108,height=35] - several
+java.awt.Rectangle[x=753,y=5,width=80,height=35] - shots
+java.awt.Rectangle[x=838,y=5,width=38,height=35] - to
+java.awt.Rectangle[x=5,y=45,width=66,height=35] - form
+java.awt.Rectangle[x=76,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=105,y=45,width=136,height=35] - narrative
+java.awt.Rectangle[x=246,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=289,y=45,width=108,height=35] - firemen
+java.awt.Rectangle[x=402,y=45,width=150,height=35] - responding
+java.awt.Rectangle[x=557,y=45,width=38,height=35] - to
+java.awt.Rectangle[x=600,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=629,y=45,width=80,height=35] - house
+java.awt.Rectangle[x=714,y=45,width=80,height=35] - fire.
+java.awt.Rectangle[x=799,y=45,width=66,height=35] - They
+java.awt.Rectangle[x=5,y=85,width=80,height=35] - leave
+java.awt.Rectangle[x=90,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=147,y=85,width=108,height=35] - station
+java.awt.Rectangle[x=260,y=85,width=66,height=35] - with
+java.awt.Rectangle[x=331,y=85,width=80,height=35] - their
+java.awt.Rectangle[x=416,y=85,width=80,height=35] - horse
+java.awt.Rectangle[x=501,y=85,width=80,height=35] - drawn
+java.awt.Rectangle[x=586,y=85,width=108,height=35] - pumper,
+java.awt.Rectangle[x=699,y=85,width=94,height=35] - arrive
+java.awt.Rectangle[x=798,y=85,width=38,height=35] - on
+java.awt.Rectangle[x=841,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=125,width=94,height=35] - scene,
+java.awt.Rectangle[x=104,y=125,width=52,height=35] - and
+java.awt.Rectangle[x=161,y=125,width=94,height=35] - effect
+java.awt.Rectangle[x=260,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=317,y=125,width=66,height=35] - safe
+java.awt.Rectangle[x=388,y=125,width=94,height=35] - rescue
+java.awt.Rectangle[x=487,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=530,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=559,y=125,width=80,height=35] - woman
+java.awt.Rectangle[x=644,y=125,width=66,height=35] - from
+java.awt.Rectangle[x=715,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=772,y=125,width=108,height=35] - burning
+java.awt.Rectangle[x=5,y=165,width=94,height=35] - house.
+java.awt.Rectangle[x=104,y=165,width=52,height=35] - But
+java.awt.Rectangle[x=161,y=165,width=80,height=35] - wait,
+java.awt.Rectangle[x=246,y=165,width=52,height=35] - she
+java.awt.Rectangle[x=303,y=165,width=80,height=35] - tells
+java.awt.Rectangle[x=388,y=165,width=66,height=35] - them
+java.awt.Rectangle[x=459,y=165,width=38,height=35] - of
+java.awt.Rectangle[x=502,y=165,width=52,height=35] - her
+java.awt.Rectangle[x=559,y=165,width=80,height=35] - child
+java.awt.Rectangle[x=644,y=165,width=52,height=35] - yet
+java.awt.Rectangle[x=701,y=165,width=94,height=35] - asleep
+java.awt.Rectangle[x=800,y=165,width=38,height=35] - in
+java.awt.Rectangle[x=843,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=205,width=108,height=35] - burning
+java.awt.Rectangle[x=118,y=205,width=108,height=35] - bedroom
+java.awt.Rectangle[x=231,y=205,width=24,height=35] - .
+java.awt.Rectangle[x=260,y=205,width=24,height=35] - .
+java.awt.Rectangle[x=289,y=205,width=24,height=35] - .
+2015/04/01 - 03:50:09 Clicked radio button - category: Technology
+2015/04/01 - 03:50:09 category Technology set as primary category
+2015/04/01 - 03:50:10 Clicked radio button - category: Drugs
+2015/04/01 - 03:50:10 category Drugs set as primary category
+2015/04/01 - 03:50:13 clicked button Next
+2015/04/01 - 03:50:14 Displayed primary category message dialog warning
+2015/04/01 - 03:50:15 Clicked radio button - category: Drugs
+2015/04/01 - 03:50:15 category Drugs set as secondary category
+2015/04/01 - 03:50:16 clicked button Next
+2015/04/01 - 03:50:16 displayed content of movie ID=7
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:16 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:16 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:16 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=122,height=35] - Bataille
+java.awt.Rectangle[x=132,y=5,width=38,height=35] - de
+java.awt.Rectangle[x=175,y=5,width=80,height=35] - neige
+2015/04/01 - 03:50:16 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=122,height=35] - Bataille
+java.awt.Rectangle[x=132,y=5,width=38,height=35] - de
+java.awt.Rectangle[x=175,y=5,width=80,height=35] - neige
+2015/04/01 - 03:50:16 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=150,height=35] - Wintertime
+java.awt.Rectangle[x=160,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=203,y=5,width=94,height=35] - Lyons.
+java.awt.Rectangle[x=302,y=5,width=80,height=35] - About
+java.awt.Rectangle[x=387,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=416,y=5,width=80,height=35] - dozen
+java.awt.Rectangle[x=501,y=5,width=108,height=35] - people,
+java.awt.Rectangle[x=614,y=5,width=52,height=35] - men
+java.awt.Rectangle[x=671,y=5,width=52,height=35] - and
+java.awt.Rectangle[x=728,y=5,width=94,height=35] - women,
+java.awt.Rectangle[x=827,y=5,width=52,height=35] - are
+java.awt.Rectangle[x=5,y=45,width=94,height=35] - having
+java.awt.Rectangle[x=104,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=133,y=45,width=122,height=35] - snowball
+java.awt.Rectangle[x=260,y=45,width=80,height=35] - fight
+java.awt.Rectangle[x=345,y=45,width=38,height=35] - in
+java.awt.Rectangle[x=388,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=445,y=45,width=94,height=35] - middle
+java.awt.Rectangle[x=544,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=587,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=616,y=45,width=150,height=35] - tree-lined
+java.awt.Rectangle[x=771,y=45,width=108,height=35] - street.
+java.awt.Rectangle[x=5,y=85,width=52,height=35] - The
+java.awt.Rectangle[x=62,y=85,width=108,height=35] - cyclist
+java.awt.Rectangle[x=175,y=85,width=94,height=35] - coming
+java.awt.Rectangle[x=274,y=85,width=80,height=35] - along
+java.awt.Rectangle[x=359,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=416,y=85,width=66,height=35] - road
+java.awt.Rectangle[x=487,y=85,width=108,height=35] - becomes
+java.awt.Rectangle[x=600,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=657,y=85,width=94,height=35] - target
+java.awt.Rectangle[x=756,y=85,width=38,height=35] - of
+java.awt.Rectangle[x=5,y=125,width=178,height=35] - opportunity.
+java.awt.Rectangle[x=188,y=125,width=38,height=35] - He
+java.awt.Rectangle[x=231,y=125,width=80,height=35] - falls
+java.awt.Rectangle[x=316,y=125,width=52,height=35] - off
+java.awt.Rectangle[x=373,y=125,width=52,height=35] - his
+java.awt.Rectangle[x=430,y=125,width=122,height=35] - bicycle.
+java.awt.Rectangle[x=557,y=125,width=66,height=35] - He's
+java.awt.Rectangle[x=628,y=125,width=52,height=35] - not
+java.awt.Rectangle[x=685,y=125,width=80,height=35] - hurt,
+java.awt.Rectangle[x=770,y=125,width=52,height=35] - but
+java.awt.Rectangle[x=827,y=125,width=38,height=35] - he
+java.awt.Rectangle[x=5,y=165,width=80,height=35] - rides
+java.awt.Rectangle[x=90,y=165,width=66,height=35] - back
+java.awt.Rectangle[x=161,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=218,y=165,width=52,height=35] - way
+java.awt.Rectangle[x=275,y=165,width=38,height=35] - he
+java.awt.Rectangle[x=318,y=165,width=80,height=35] - came,
+java.awt.Rectangle[x=403,y=165,width=38,height=35] - as
+java.awt.Rectangle[x=446,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=503,y=165,width=80,height=35] - fight
+java.awt.Rectangle[x=588,y=165,width=150,height=35] - continues.
+java.awt.Rectangle[x=743,y=165,width=94,height=35] - Uh-oh.
+java.awt.Rectangle[x=842,y=165,width=38,height=35] - He
+java.awt.Rectangle[x=5,y=205,width=94,height=35] - forgot
+java.awt.Rectangle[x=104,y=205,width=52,height=35] - his
+java.awt.Rectangle[x=161,y=205,width=52,height=35] - cap
+java.awt.Rectangle[x=218,y=205,width=38,height=35] - in
+java.awt.Rectangle[x=261,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=318,y=205,width=80,height=35] - snow.
+2015/04/01 - 03:50:17 Clicked radio button - category: Science
+2015/04/01 - 03:50:17 category Science set as primary category
+2015/04/01 - 03:50:18 clicked button Next
+2015/04/01 - 03:50:18 displayed content of movie ID=8
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:18 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:18 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:18 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=122,height=35] - Souvenir
+java.awt.Rectangle[x=132,y=5,width=80,height=35] - Strip
+java.awt.Rectangle[x=217,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=260,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=317,y=5,width=94,height=35] - Edison
+java.awt.Rectangle[x=416,y=5,width=164,height=35] - Kinetoscope
+2015/04/01 - 03:50:18 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=122,height=35] - Souvenir
+java.awt.Rectangle[x=132,y=5,width=80,height=35] - Strip
+java.awt.Rectangle[x=217,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=260,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=317,y=5,width=94,height=35] - Edison
+java.awt.Rectangle[x=416,y=5,width=164,height=35] - Kinetoscope
+2015/04/01 - 03:50:18 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=150,height=35] - Vaudeville
+java.awt.Rectangle[x=160,y=5,width=66,height=35] - star
+java.awt.Rectangle[x=231,y=5,width=80,height=35] - Eugen
+java.awt.Rectangle[x=316,y=5,width=108,height=35] - Sandow,
+java.awt.Rectangle[x=429,y=5,width=52,height=35] - who
+java.awt.Rectangle[x=486,y=5,width=94,height=35] - claims
+java.awt.Rectangle[x=585,y=5,width=38,height=35] - to
+java.awt.Rectangle[x=628,y=5,width=38,height=35] - be
+java.awt.Rectangle[x=671,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=728,y=5,width=136,height=35] - strongest
+java.awt.Rectangle[x=5,y=45,width=52,height=35] - man
+java.awt.Rectangle[x=62,y=45,width=38,height=35] - in
+java.awt.Rectangle[x=105,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=162,y=45,width=94,height=35] - world,
+java.awt.Rectangle[x=261,y=45,width=108,height=35] - appears
+java.awt.Rectangle[x=374,y=45,width=38,height=35] - in
+java.awt.Rectangle[x=417,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=474,y=45,width=94,height=35] - Thomas
+java.awt.Rectangle[x=573,y=45,width=94,height=35] - Edison
+java.awt.Rectangle[x=672,y=45,width=136,height=35] - Company's
+java.awt.Rectangle[x=813,y=45,width=66,height=35] - film
+java.awt.Rectangle[x=5,y=85,width=108,height=35] - studio.
+java.awt.Rectangle[x=118,y=85,width=80,height=35] - Eugen
+java.awt.Rectangle[x=203,y=85,width=108,height=35] - Sandow,
+java.awt.Rectangle[x=316,y=85,width=52,height=35] - who
+java.awt.Rectangle[x=373,y=85,width=108,height=35] - appears
+java.awt.Rectangle[x=486,y=85,width=108,height=35] - without
+java.awt.Rectangle[x=599,y=85,width=80,height=35] - props
+java.awt.Rectangle[x=684,y=85,width=38,height=35] - or
+java.awt.Rectangle[x=727,y=85,width=150,height=35] - equipment,
+java.awt.Rectangle[x=5,y=125,width=94,height=35] - flexes
+java.awt.Rectangle[x=104,y=125,width=52,height=35] - his
+java.awt.Rectangle[x=161,y=125,width=108,height=35] - muscles
+java.awt.Rectangle[x=274,y=125,width=52,height=35] - and
+java.awt.Rectangle[x=331,y=125,width=108,height=35] - assumes
+java.awt.Rectangle[x=444,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=473,y=125,width=108,height=35] - variety
+java.awt.Rectangle[x=586,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=629,y=125,width=80,height=35] - poses
+java.awt.Rectangle[x=714,y=125,width=66,height=35] - that
+java.awt.Rectangle[x=785,y=125,width=52,height=35] - are
+java.awt.Rectangle[x=5,y=165,width=122,height=35] - designed
+java.awt.Rectangle[x=132,y=165,width=38,height=35] - to
+java.awt.Rectangle[x=175,y=165,width=136,height=35] - highlight
+java.awt.Rectangle[x=316,y=165,width=52,height=35] - his
+java.awt.Rectangle[x=373,y=165,width=136,height=35] - physique.
+2015/04/01 - 03:50:19 Clicked radio button - category: Science
+2015/04/01 - 03:50:19 category Science set as primary category
+2015/04/01 - 03:50:20 clicked button Next
+2015/04/01 - 03:50:20 displayed content of movie ID=9
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:50:20 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:50:20 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:50:20 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=94,height=35] - Newark
+java.awt.Rectangle[x=104,y=5,width=108,height=35] - Athlete
+2015/04/01 - 03:50:20 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=94,height=35] - Newark
+java.awt.Rectangle[x=104,y=5,width=108,height=35] - Athlete
+2015/04/01 - 03:50:20 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=24,height=35] - A
+java.awt.Rectangle[x=34,y=5,width=80,height=35] - young
+java.awt.Rectangle[x=119,y=5,width=52,height=35] - man
+java.awt.Rectangle[x=176,y=5,width=94,height=35] - stands
+java.awt.Rectangle[x=275,y=5,width=94,height=35] - before
+java.awt.Rectangle[x=374,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=431,y=5,width=94,height=35] - camera
+java.awt.Rectangle[x=530,y=5,width=108,height=35] - holding
+java.awt.Rectangle[x=643,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=672,y=5,width=66,height=35] - club
+java.awt.Rectangle[x=743,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=786,y=5,width=66,height=35] - each
+java.awt.Rectangle[x=5,y=45,width=80,height=35] - hand,
+java.awt.Rectangle[x=90,y=45,width=150,height=35] - horizontal
+java.awt.Rectangle[x=245,y=45,width=38,height=35] - to
+java.awt.Rectangle[x=288,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=345,y=45,width=108,height=35] - ground.
+java.awt.Rectangle[x=458,y=45,width=38,height=35] - He
+java.awt.Rectangle[x=501,y=45,width=94,height=35] - raises
+java.awt.Rectangle[x=600,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=657,y=45,width=80,height=35] - heads
+java.awt.Rectangle[x=742,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=785,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=842,y=45,width=52,height=35] - two
+java.awt.Rectangle[x=5,y=85,width=80,height=35] - clubs
+java.awt.Rectangle[x=90,y=85,width=38,height=35] - in
+java.awt.Rectangle[x=133,y=85,width=108,height=35] - unison,
+java.awt.Rectangle[x=246,y=85,width=38,height=35] - by
+java.awt.Rectangle[x=289,y=85,width=122,height=35] - rotating
+java.awt.Rectangle[x=416,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=473,y=85,width=80,height=35] - clubs
+java.awt.Rectangle[x=558,y=85,width=108,height=35] - without
+java.awt.Rectangle[x=671,y=85,width=108,height=35] - lifting
+java.awt.Rectangle[x=784,y=85,width=52,height=35] - his
+java.awt.Rectangle[x=5,y=125,width=80,height=35] - arms.
+java.awt.Rectangle[x=90,y=125,width=52,height=35] - The
+java.awt.Rectangle[x=147,y=125,width=66,height=35] - film
+java.awt.Rectangle[x=218,y=125,width=66,height=35] - then
+java.awt.Rectangle[x=289,y=125,width=80,height=35] - shows
+java.awt.Rectangle[x=374,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=431,y=125,width=66,height=35] - same
+java.awt.Rectangle[x=502,y=125,width=108,height=35] - footage
+java.awt.Rectangle[x=615,y=125,width=66,height=35] - over
+java.awt.Rectangle[x=686,y=125,width=94,height=35] - again,
+java.awt.Rectangle[x=785,y=125,width=38,height=35] - at
+java.awt.Rectangle[x=5,y=165,width=136,height=35] - different
+java.awt.Rectangle[x=146,y=165,width=108,height=35] - speeds.
+2015/04/01 - 03:50:21 Clicked radio button - category: Science
+2015/04/01 - 03:50:21 category Science set as primary category
+2015/04/01 - 03:50:22 clicked button Next
+2015/04/01 - 03:50:22 displayed content of movie ID=10
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=269,y=990,width=368,height=45] - footer panel
+2015/04/01 - 03:50:22 Button positions:
+java.awt.Rectangle[x=184,y=0,width=184,height=45] - next
+2015/04/01 - 03:50:22 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=184,height=45] - id label
+2015/04/01 - 03:50:22 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=80,height=35] - Annie
+java.awt.Rectangle[x=90,y=5,width=94,height=35] - Oakley
+2015/04/01 - 03:50:22 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=80,height=35] - Annie
+java.awt.Rectangle[x=90,y=5,width=94,height=35] - Oakley
+2015/04/01 - 03:50:22 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=80,height=35] - Annie
+java.awt.Rectangle[x=90,y=5,width=52,height=35] - get
+java.awt.Rectangle[x=147,y=5,width=66,height=35] - your
+java.awt.Rectangle[x=218,y=5,width=80,height=35] - guns.
+java.awt.Rectangle[x=303,y=5,width=122,height=35] - Standing
+java.awt.Rectangle[x=430,y=5,width=38,height=35] - on
+java.awt.Rectangle[x=473,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=530,y=5,width=136,height=35] - left-hand
+java.awt.Rectangle[x=671,y=5,width=94,height=35] - corner
+java.awt.Rectangle[x=770,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=813,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=45,width=94,height=35] - stage,
+java.awt.Rectangle[x=104,y=45,width=108,height=35] - wearing
+java.awt.Rectangle[x=217,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=246,y=45,width=94,height=35] - cowboy
+java.awt.Rectangle[x=345,y=45,width=66,height=35] - hat,
+java.awt.Rectangle[x=416,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=445,y=45,width=80,height=35] - skirt
+java.awt.Rectangle[x=530,y=45,width=66,height=35] - with
+java.awt.Rectangle[x=601,y=45,width=94,height=35] - fringe
+java.awt.Rectangle[x=700,y=45,width=38,height=35] - at
+java.awt.Rectangle[x=743,y=45,width=52,height=35] - the
+java.awt.Rectangle[x=800,y=45,width=66,height=35] - hem,
+java.awt.Rectangle[x=5,y=85,width=52,height=35] - and
+java.awt.Rectangle[x=62,y=85,width=24,height=35] - a
+java.awt.Rectangle[x=91,y=85,width=94,height=35] - jacket
+java.awt.Rectangle[x=190,y=85,width=66,height=35] - with
+java.awt.Rectangle[x=261,y=85,width=94,height=35] - fringe
+java.awt.Rectangle[x=360,y=85,width=108,height=35] - hanging
+java.awt.Rectangle[x=473,y=85,width=66,height=35] - from
+java.awt.Rectangle[x=544,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=601,y=85,width=122,height=35] - sleeves,
+java.awt.Rectangle[x=728,y=85,width=80,height=35] - Annie
+java.awt.Rectangle[x=813,y=85,width=94,height=35] - Oakley
+java.awt.Rectangle[x=5,y=125,width=80,height=35] - takes
+java.awt.Rectangle[x=90,y=125,width=24,height=35] - a
+java.awt.Rectangle[x=119,y=125,width=80,height=35] - rifle
+java.awt.Rectangle[x=204,y=125,width=66,height=35] - from
+java.awt.Rectangle[x=275,y=125,width=52,height=35] - her
+java.awt.Rectangle[x=332,y=125,width=150,height=35] - assistant,
+java.awt.Rectangle[x=487,y=125,width=94,height=35] - turns,
+java.awt.Rectangle[x=586,y=125,width=52,height=35] - and
+java.awt.Rectangle[x=643,y=125,width=108,height=35] - rapidly
+java.awt.Rectangle[x=756,y=125,width=80,height=35] - fires
+java.awt.Rectangle[x=841,y=125,width=52,height=35] - six
+java.awt.Rectangle[x=5,y=165,width=94,height=35] - shots,
+java.awt.Rectangle[x=104,y=165,width=108,height=35] - cocking
+java.awt.Rectangle[x=217,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=274,y=165,width=52,height=35] - gun
+java.awt.Rectangle[x=331,y=165,width=80,height=35] - after
+java.awt.Rectangle[x=416,y=165,width=66,height=35] - each
+java.awt.Rectangle[x=487,y=165,width=66,height=35] - one,
+java.awt.Rectangle[x=558,y=165,width=108,height=35] - hitting
+java.awt.Rectangle[x=671,y=165,width=52,height=35] - six
+java.awt.Rectangle[x=728,y=165,width=108,height=35] - targets
+java.awt.Rectangle[x=841,y=165,width=38,height=35] - on
+java.awt.Rectangle[x=5,y=205,width=24,height=35] - a
+java.awt.Rectangle[x=34,y=205,width=80,height=35] - board
+java.awt.Rectangle[x=119,y=205,width=38,height=35] - at
+java.awt.Rectangle[x=162,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=219,y=205,width=80,height=35] - other
+java.awt.Rectangle[x=304,y=205,width=66,height=35] - side
+java.awt.Rectangle[x=375,y=205,width=38,height=35] - of
+java.awt.Rectangle[x=418,y=205,width=52,height=35] - the
+java.awt.Rectangle[x=475,y=205,width=94,height=35] - stage.
+java.awt.Rectangle[x=574,y=205,width=80,height=35] - Then,
+java.awt.Rectangle[x=659,y=205,width=38,height=35] - as
+java.awt.Rectangle[x=702,y=205,width=52,height=35] - her
+java.awt.Rectangle[x=759,y=205,width=136,height=35] - assistant
+java.awt.Rectangle[x=5,y=245,width=80,height=35] - moves
+java.awt.Rectangle[x=90,y=245,width=108,height=35] - quickly
+java.awt.Rectangle[x=203,y=245,width=38,height=35] - to
+java.awt.Rectangle[x=246,y=245,width=52,height=35] - the
+java.awt.Rectangle[x=303,y=245,width=94,height=35] - target
+java.awt.Rectangle[x=402,y=245,width=66,height=35] - side
+java.awt.Rectangle[x=473,y=245,width=38,height=35] - of
+java.awt.Rectangle[x=516,y=245,width=52,height=35] - the
+java.awt.Rectangle[x=573,y=245,width=80,height=35] - stage
+java.awt.Rectangle[x=658,y=245,width=52,height=35] - and
+java.awt.Rectangle[x=715,y=245,width=94,height=35] - kneels
+java.awt.Rectangle[x=814,y=245,width=80,height=35] - down,
+java.awt.Rectangle[x=5,y=285,width=80,height=35] - Annie
+java.awt.Rectangle[x=90,y=285,width=108,height=35] - changes
+java.awt.Rectangle[x=203,y=285,width=80,height=35] - guns.
+java.awt.Rectangle[x=288,y=285,width=52,height=35] - The
+java.awt.Rectangle[x=345,y=285,width=136,height=35] - assistant
+java.awt.Rectangle[x=486,y=285,width=94,height=35] - tosses
+java.awt.Rectangle[x=585,y=285,width=80,height=35] - small
+java.awt.Rectangle[x=670,y=285,width=66,height=35] - clay
+java.awt.Rectangle[x=741,y=285,width=108,height=35] - pigeons
+java.awt.Rectangle[x=854,y=285,width=38,height=35] - in
+java.awt.Rectangle[x=5,y=325,width=52,height=35] - the
+java.awt.Rectangle[x=62,y=325,width=66,height=35] - air,
+java.awt.Rectangle[x=133,y=325,width=52,height=35] - one
+java.awt.Rectangle[x=190,y=325,width=38,height=35] - at
+java.awt.Rectangle[x=233,y=325,width=24,height=35] - a
+java.awt.Rectangle[x=262,y=325,width=80,height=35] - time,
+java.awt.Rectangle[x=347,y=325,width=122,height=35] - directly
+java.awt.Rectangle[x=474,y=325,width=80,height=35] - above
+java.awt.Rectangle[x=559,y=325,width=52,height=35] - his
+java.awt.Rectangle[x=616,y=325,width=80,height=35] - head;
+java.awt.Rectangle[x=701,y=325,width=80,height=35] - Annie
+java.awt.Rectangle[x=786,y=325,width=80,height=35] - takes
+java.awt.Rectangle[x=5,y=365,width=52,height=35] - aim
+java.awt.Rectangle[x=62,y=365,width=52,height=35] - and
+java.awt.Rectangle[x=119,y=365,width=150,height=35] - pulverizes
+java.awt.Rectangle[x=274,y=365,width=66,height=35] - each
+java.awt.Rectangle[x=345,y=365,width=66,height=35] - one.
+java.awt.Rectangle[x=416,y=365,width=80,height=35] - She's
+java.awt.Rectangle[x=501,y=365,width=122,height=35] - finished
+java.awt.Rectangle[x=628,y=365,width=52,height=35] - her
+java.awt.Rectangle[x=685,y=365,width=108,height=35] - seventh
+java.awt.Rectangle[x=798,y=365,width=38,height=35] - of
+java.awt.Rectangle[x=5,y=405,width=80,height=35] - these
+java.awt.Rectangle[x=90,y=405,width=80,height=35] - shots
+java.awt.Rectangle[x=175,y=405,width=66,height=35] - when
+java.awt.Rectangle[x=246,y=405,width=52,height=35] - the
+java.awt.Rectangle[x=303,y=405,width=66,height=35] - reel
+java.awt.Rectangle[x=374,y=405,width=80,height=35] - ends.
+2015/04/01 - 03:50:23 Clicked radio button - category: Science
+2015/04/01 - 03:50:23 category Science set as primary category
+2015/04/01 - 03:50:24 clicked button Next
+2015/04/01 - 03:50:24 Application finished
+2015/04/01 - 03:52:25 initialized log file
+screen resoluton: 1920.0 x 1080.0
+set name: peter
+selected source file: 1_10.json
+2015/04/01 - 03:52:25 displayed content of movie ID=1
+panel positions:
+java.awt.Rectangle[x=65,y=24,width=1855,height=1056] - frame
+java.awt.Rectangle[x=0,y=0,width=1855,height=1056] - contentPane
+java.awt.Rectangle[x=5,y=5,width=907,height=1046] - leftPane
+java.awt.Rectangle[x=942,y=5,width=907,height=1046] - rightPane
+java.awt.Rectangle[x=0,y=54,width=907,height=140] - imdbTitle panel
+java.awt.Rectangle[x=0,y=248,width=907,height=140] - csfdTitle panel
+java.awt.Rectangle[x=0,y=442,width=907,height=539] - description panel
+java.awt.Rectangle[x=297,y=990,width=312,height=45] - footer panel
+2015/04/01 - 03:52:25 Button positions:
+java.awt.Rectangle[x=156,y=0,width=156,height=45] - next
+2015/04/01 - 03:52:25 Label positions:
+java.awt.Rectangle[x=0,y=0,width=907,height=54] - imdb title label
+java.awt.Rectangle[x=0,y=194,width=907,height=54] - csfd title label
+java.awt.Rectangle[x=0,y=388,width=907,height=54] - description label
+java.awt.Rectangle[x=0,y=0,width=156,height=45] - id label
+2015/04/01 - 03:52:25 Category positions:
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Psychology
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Society
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Biography
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Health
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Philosophy
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Adventure
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Crime
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Nature
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Mystery
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Animals
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Comedy
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Science
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Catastriphic
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Environment
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Drugs
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Technology
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Economics
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Nothing
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Geography
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Housing
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Politics
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Military and War
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Traveling
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - History
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Media
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Art and Artists
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Sports
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Culture
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Religion
+java.awt.Rectangle[x=0,y=0,width=428,height=22] - Conspiracy
+2015/04/01 - 03:52:25 IMDB Title text positions:
+java.awt.Rectangle[x=5,y=5,width=108,height=35] - Príchod
+java.awt.Rectangle[x=118,y=5,width=80,height=35] - vlaku
+java.awt.Rectangle[x=203,y=5,width=38,height=35] - do
+java.awt.Rectangle[x=246,y=5,width=108,height=35] - stanice
+java.awt.Rectangle[x=359,y=5,width=38,height=35] - La
+java.awt.Rectangle[x=402,y=5,width=94,height=35] - Ciotat
+2015/04/01 - 03:52:25 CSFD Title text positions:
+java.awt.Rectangle[x=5,y=5,width=108,height=35] - Arrivée
+java.awt.Rectangle[x=118,y=5,width=66,height=35] - d'un
+java.awt.Rectangle[x=189,y=5,width=80,height=35] - train
+java.awt.Rectangle[x=274,y=5,width=24,height=35] - à
+java.awt.Rectangle[x=303,y=5,width=38,height=35] - la
+java.awt.Rectangle[x=346,y=5,width=108,height=35] - Ciotat,
+java.awt.Rectangle[x=459,y=5,width=38,height=35] - L'
+2015/04/01 - 03:52:25 Description text positions:
+java.awt.Rectangle[x=5,y=5,width=24,height=35] - A
+java.awt.Rectangle[x=34,y=5,width=80,height=35] - group
+java.awt.Rectangle[x=119,y=5,width=38,height=35] - of
+java.awt.Rectangle[x=162,y=5,width=94,height=35] - people
+java.awt.Rectangle[x=261,y=5,width=52,height=35] - are
+java.awt.Rectangle[x=318,y=5,width=122,height=35] - standing
+java.awt.Rectangle[x=445,y=5,width=38,height=35] - in
+java.awt.Rectangle[x=488,y=5,width=24,height=35] - a
+java.awt.Rectangle[x=517,y=5,width=122,height=35] - straight
+java.awt.Rectangle[x=644,y=5,width=66,height=35] - line
+java.awt.Rectangle[x=715,y=5,width=80,height=35] - along
+java.awt.Rectangle[x=800,y=5,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=45,width=122,height=35] - platform
+java.awt.Rectangle[x=132,y=45,width=38,height=35] - of
+java.awt.Rectangle[x=175,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=204,y=45,width=108,height=35] - railway
+java.awt.Rectangle[x=317,y=45,width=122,height=35] - station,
+java.awt.Rectangle[x=444,y=45,width=108,height=35] - waiting
+java.awt.Rectangle[x=557,y=45,width=52,height=35] - for
+java.awt.Rectangle[x=614,y=45,width=24,height=35] - a
+java.awt.Rectangle[x=643,y=45,width=94,height=35] - train,
+java.awt.Rectangle[x=742,y=45,width=80,height=35] - which
+java.awt.Rectangle[x=827,y=45,width=38,height=35] - is
+java.awt.Rectangle[x=5,y=85,width=66,height=35] - seen
+java.awt.Rectangle[x=76,y=85,width=94,height=35] - coming
+java.awt.Rectangle[x=175,y=85,width=38,height=35] - at
+java.awt.Rectangle[x=218,y=85,width=66,height=35] - some
+java.awt.Rectangle[x=289,y=85,width=136,height=35] - distance.
+java.awt.Rectangle[x=430,y=85,width=66,height=35] - When
+java.awt.Rectangle[x=501,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=558,y=85,width=80,height=35] - train
+java.awt.Rectangle[x=643,y=85,width=80,height=35] - stops
+java.awt.Rectangle[x=728,y=85,width=38,height=35] - at
+java.awt.Rectangle[x=771,y=85,width=52,height=35] - the
+java.awt.Rectangle[x=5,y=125,width=136,height=35] - platform,
+java.awt.Rectangle[x=146,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=203,y=125,width=66,height=35] - line
+java.awt.Rectangle[x=274,y=125,width=150,height=35] - dissolves.
+java.awt.Rectangle[x=429,y=125,width=52,height=35] - The
+java.awt.Rectangle[x=486,y=125,width=80,height=35] - doors
+java.awt.Rectangle[x=571,y=125,width=38,height=35] - of
+java.awt.Rectangle[x=614,y=125,width=52,height=35] - the
+java.awt.Rectangle[x=671,y=125,width=178,height=35] - railway-cars
+java.awt.Rectangle[x=5,y=165,width=80,height=35] - open,
+java.awt.Rectangle[x=90,y=165,width=52,height=35] - and
+java.awt.Rectangle[x=147,y=165,width=94,height=35] - people
+java.awt.Rectangle[x=246,y=165,width=38,height=35] - on
+java.awt.Rectangle[x=289,y=165,width=52,height=35] - the
+java.awt.Rectangle[x=346,y=165,width=122,height=35] - platform
+java.awt.Rectangle[x=473,y=165,width=66,height=35] - help
+java.awt.Rectangle[x=544,y=165,width=150,height=35] - passengers
+java.awt.Rectangle[x=699,y=165,width=38,height=35] - to
+java.awt.Rectangle[x=742,y=165,width=52,height=35] - get
+java.awt.Rectangle[x=799,y=165,width=66,height=35] - off.
+2015/04/01 - 03:52:53 Application closed
