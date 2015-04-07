@@ -35,6 +35,7 @@ public class Classifier {
 	 private static FileReader file;
 	 private static File selectedFile;
 	 public static PrintWriter log;
+	 public static Log jsonLog;
 	 public static SimpleDateFormat date;
 	 public static Date time;
 	public static Window gui_frame;
@@ -64,14 +65,14 @@ public class Classifier {
 		}
 	}
 	
-	public static String getTime(){
+	public static String getTime(Date time){
 		date = new SimpleDateFormat ("yyyy/MM/dd '-' hh:mm:ss");
-		time = new Date();
 		return date.format(time);
 	}
 	
 	public static void classify() throws FileNotFoundException, IOException, ParseException{
 		parser = new JSONParser();
+		new File("./output").mkdir();
 		
 		//select input file
 		final JFileChooser fc = new JFileChooser();
@@ -84,17 +85,29 @@ public class Classifier {
 	    Window.loadUserName();
 	    
 	    //initialize log file
-	  	String fileName = gui_frame.getName() + ".log";
+	  	String fileName = "./output/" + gui_frame.getName() + ".log";
 	  	log = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
-	  	log.println(getTime() + " initialized log file");
+	  	jsonLog = new Log();
 	  		
+	  	//log init time
+	  	time = new Date();
+	  	log.println(getTime(time) + " initialized log file");
+	  	jsonLog.setLogInitTime(getTime(time));
+	  		
+	  	//log screen resolution
 	  	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 	  	log.println("screen resoluton: " +screenSize.getWidth()+" x "+screenSize.getHeight());
+	  	double[] screenResolution = {screenSize.getWidth(), screenSize.getHeight()};
+	  	jsonLog.setScreenResolution(screenResolution);
+	  	
+	  	//log participant name
 	  	log.println("set name: " +gui_frame.getName());
+	  	jsonLog.setParticipantName(gui_frame.getName());
         
-		
+		//log source file
 		file = new FileReader(path);
 		log.println("selected source file: " + selectedFile.getName());
+		jsonLog.setSourceFile(selectedFile.getName());
 		
 		data = (JSONArray) parser.parse(file);
 		
@@ -112,6 +125,7 @@ public class Classifier {
 		gui_frame.logImdbTitle();
 		gui_frame.logcsfdTitle();
 		gui_frame.logDescription();
+		
 	}
 	
 	public static String[] splitString(String string){
@@ -134,7 +148,10 @@ public class Classifier {
 		
 		next += 1;
 			
-		log.println(getTime() + " displayed content of movie ID=" +id );
+		time = new Date();
+		String s = "displayed content of movie ID=" +id;
+		log.println(getTime(time) + " " +s );
+		jsonLog.addEvent(new Event(getTime(time), s));
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -146,10 +163,38 @@ public class Classifier {
 	}
 	
 	public static void saveResult() throws IOException{
-		String resultfileName = "./"+gui_frame.getName() + "_result.json";
+		String resultfileName = "./output/"+gui_frame.getName() + "_result.json";
 		FileWriter file = new FileWriter(resultfileName);
         try {
             file.write(result.toJSONString());
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+ 
+        }
+        file.close();
+	}
+	
+	//Create and save JSON log
+	@SuppressWarnings("unchecked")
+	public static void constructJsonLog() throws IOException{
+		JSONObject jResult = new JSONObject();
+		jResult.put("logInitTime", jsonLog.getLogInitTime());
+		jResult.put("participantName", jsonLog.getParticipantName());
+		jResult.put("sourceFile", jsonLog.getSourceFile());
+		jResult.put("screenResolution", jsonLog.getScreenResolution());
+		jResult.put("events", jsonLog.getEvents());
+		
+		JSONObject positions = new JSONObject();
+		positions.put("categories", jsonLog.getCategories());
+		
+		jResult.put("positions", positions);
+			
+		//save JSON log
+		String resultfileName = "./output/"+gui_frame.getName() + "_log.json";
+		FileWriter file = new FileWriter(resultfileName);
+        try {
+            file.write(jResult.toJSONString());
  
         } catch (IOException e) {
             e.printStackTrace();

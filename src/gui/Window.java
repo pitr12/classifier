@@ -17,6 +17,7 @@ import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,7 +30,9 @@ import javax.swing.border.EmptyBorder;
 import org.json.simple.parser.ParseException;
 import org.omg.CORBA.FREE_MEM;
 
+import work.Category;
 import work.Classifier;
+import work.Event;
 
 public class Window extends JFrame {
 	
@@ -99,7 +102,7 @@ public class Window extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeButtonState(index);
-				Classifier.log.println(Classifier.getTime() + " Clicked radio button - category: " + group.get(index).getText());
+				Classifier.time = new Date();
 				String new_state;
 				switch(states[index]){
 				case 0: new_state = "deselected"; break;
@@ -107,7 +110,10 @@ public class Window extends JFrame {
 				case 2: new_state = "secondary category"; break;
 				default: new_state = "";
 				}
-				Classifier.log.println(Classifier.getTime() + " category " +group.get(index).getText() + " set as " +new_state);
+				Classifier.time = new Date();
+				String s2 = "Clicked button val=" + group.get(index).getText() + " and set as " + new_state;
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " " + s2);
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), s2));
 			}
 		});
 		group.add(button);
@@ -228,7 +234,10 @@ public class Window extends JFrame {
 	    resLabel.setFont(MsgFont);
 	    jopt.showMessageDialog( null, resLabel, "Results", JOptionPane.PLAIN_MESSAGE );
 	    
-	    Classifier.log.println(Classifier.getTime() + " Displayed primary category message dialog warning");
+	    Classifier.time = new Date();
+	    Classifier.log.println(Classifier.getTime(Classifier.time) + " Displayed primary category message dialog warning");
+		Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Displayed primary category message dialog warning"));
+
 		
 		return false;
 	}
@@ -250,7 +259,10 @@ public class Window extends JFrame {
 	    resLabel.setFont(MsgFont);
 	    jopt.showMessageDialog( null, resLabel, "Results", JOptionPane.PLAIN_MESSAGE );
 	    
-	    Classifier.log.println(Classifier.getTime() + " Displayed secondary category message dialog warning");
+	    Classifier.time = new Date();
+	    Classifier.log.println(Classifier.getTime(Classifier.time) + " Displayed secondary category message dialog warning");
+		Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Displayed secondary category message dialog warning"));
+
 	    
 		return false;
 	}
@@ -529,14 +541,16 @@ public class Window extends JFrame {
 	}
 	
 	public void logButtonPositions(){
-		Classifier.log.println(Classifier.getTime() + " Button positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " Button positions:");
 		
 		double [] nextP = getNextBtnPosition();
 		Classifier.log.println(nextP[0] + " " + nextP[1] + " " + nextP[2] + " " + nextP[3] + " - Next button");
 	}
 	
 	public void logLabelPositions(){
-		Classifier.log.println(Classifier.getTime() + " Label positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " Label positions:");
 		
 		double [] imdbLabelP = getImdbLabelPosition();
 		Classifier.log.println(imdbLabelP[0] + " " + imdbLabelP[1] + " " + imdbLabelP[2] + " " + imdbLabelP[3] + " - imdb title label");
@@ -552,18 +566,21 @@ public class Window extends JFrame {
 	}
 	
 	public void logCategoryPositions(){
-		Classifier.log.println(Classifier.getTime() + " Category positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " Category positions:");
 		rightPane.validate();
 		
 		for(int i=0; i<Classifier.CATEGORY_COUNT; i++){			
 			double [] categoryP = getCategoryPosition(category_panels.get(i).getBounds());
 			Classifier.log.println(categoryP[0] + " " + categoryP[1] + " " + categoryP[2] + " " + categoryP[3] + " " + group.get(i).getText());
+			Classifier.jsonLog.addCategory(new Category(group.get(i).getText(), categoryP));
 		}
 	}
 	
 	public void logImdbTitle(){
 		imdbTitle.validate();
-		Classifier.log.println(Classifier.getTime() + " IMDB Title text positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " IMDB Title text positions:");
 		int size = imdbTitleList.size();
 		for(int i=0; i<size; i++){
 			double [] titleP = getImdbTitlePosition(imdbTitleList.get(i).getBounds());
@@ -573,7 +590,8 @@ public class Window extends JFrame {
 	
 	public void logcsfdTitle(){
 		csfdTitle.validate();
-		Classifier.log.println(Classifier.getTime() + " CSFD Title text positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " CSFD Title text positions:");
 		int size = csfdTitleList.size();
 		for(int i=0; i<size; i++){
 			double [] titleP = getCsfdTitlePosition(csfdTitleList.get(i).getBounds());
@@ -583,7 +601,8 @@ public class Window extends JFrame {
 	
 	public void logDescription(){
 		description.validate();
-		Classifier.log.println(Classifier.getTime() + " Description text positions:");
+		Classifier.time = new Date();
+		Classifier.log.println(Classifier.getTime(Classifier.time) + " Description text positions:");
 		int size = descriptionList.size();
 		for(int i=0; i<size; i++){
 			double [] titleP = getDescriptionPosition(descriptionList.get(i).getBounds());
@@ -692,7 +711,9 @@ public class Window extends JFrame {
 		next.setBorder(new EmptyBorder(10,50,10,50));
 		next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Classifier.log.println(Classifier.getTime() + " clicked button Next");
+				Classifier.time = new Date();
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " clicked button Next");
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Clicked button Next"));
 				
 				if(checkValidity()){
 					Classifier.addResult(Classifier.next - 1);
@@ -701,8 +722,11 @@ public class Window extends JFrame {
 					if(next > Classifier.COUNT){
 						try {
 							Classifier.saveResult();
-							Classifier.log.println(Classifier.getTime() + " Application finished");
+							Classifier.time = new Date();
+							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
+							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
 							Classifier.log.close();
+							Classifier.constructJsonLog();
 						} catch (IOException e1) {
 							e1.printStackTrace();
 						}
@@ -736,8 +760,16 @@ public class Window extends JFrame {
 		
 		this.addWindowListener(new java.awt.event.WindowAdapter(){
 			public void windowClosing(WindowEvent winEv){
-				Classifier.log.println(Classifier.getTime() + " Application closed");
+				Classifier.time = new Date();
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " Application closed");
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application closed"));
 				Classifier.log.close();
+				try {
+					Classifier.constructJsonLog();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});	
 	}
