@@ -100,11 +100,9 @@ public class Classifier {
 		
 		result = new JSONArray();
 		
-//		gui_frame.setPosition("" + position + "/" + COUNT);
-//		int nextn_lbl = position + 1;
-//		gui_frame.setBtnLabel("Next  " + nextn_lbl + "/" + COUNT);
-		
 		parseMovie(0);
+		
+		gui_frame.setBtnLbl("Next  " + (next + 1) + "/" + COUNT);
 		
 		gui_frame.validate();
 		gui_frame.logPanelPostiions();
@@ -114,7 +112,6 @@ public class Classifier {
 		gui_frame.logImdbTitle();
 		gui_frame.logcsfdTitle();
 		gui_frame.logDescription();
-//		gui_frame.logTextPositions();
 	}
 	
 	public static String[] splitString(String string){
@@ -134,8 +131,6 @@ public class Classifier {
 		gui_frame.setImdbTitle(title);
 		gui_frame.setcsfdTitle(csfdTitle);
 		gui_frame.setDescription(description);
-		
-		//gui_frame.logTitle();
 		
 		next += 1;
 			

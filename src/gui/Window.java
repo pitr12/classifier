@@ -9,11 +9,13 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -25,6 +27,7 @@ import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
 
 import org.json.simple.parser.ParseException;
+import org.omg.CORBA.FREE_MEM;
 
 import work.Classifier;
 
@@ -61,6 +64,7 @@ public class Window extends JFrame {
 	private ArrayList<JLabel> descriptionList = new ArrayList<JLabel>();
 	private static ArrayList<JRadioButton> group = new ArrayList<JRadioButton>();
 	private static ArrayList<JLabel> descritons = new ArrayList<JLabel>();
+	private static ArrayList<JPanel> category_panels = new ArrayList<JPanel>();
 	
 	private static String name;
 	
@@ -117,6 +121,8 @@ public class Window extends JFrame {
 		rightPane.add(panel);
 		rightPane.revalidate();
 		rightPane.repaint();
+		
+		category_panels.add(panel);
 	}
 	
 	public static String getPrimaryCategory(){
@@ -262,37 +268,296 @@ public class Window extends JFrame {
 		name = str.replaceAll("\\s+","");
 	}
 	
-	public void logPanelPostiions(){		
+	public double[] getFramePosition(){
+		double [] result = new double[4];
+		Rectangle frameR = this.getBounds();
+		
+		result[0] = frameR.getMinX();
+		result[1] = frameR.getMinY();
+		result[2] = frameR.getMaxX();
+		result[3] = frameR.getMaxY();
+				
+		return result;
+	}
+	
+	public double[] getContentPanePosition(){
+		double [] result = new double[4];
+		Rectangle contentPaneR = contentPane.getBounds();
+		double [] frameP = getFramePosition();
+		
+		
+		result[0] = frameP[0] + contentPaneR.getMinX();
+		result[1] = frameP[1] + contentPaneR.getMinY();
+		result[2] = frameP[0] + contentPaneR.getMaxX();
+		result[3] = frameP[1] + contentPaneR.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getLefttPanePosition(){
+		double [] result = new double[4];
+		Rectangle LeftPaneR = leftPane.getBounds();
+		double [] contentP = getContentPanePosition();
+		
+		
+		result[0] = contentP[0] + LeftPaneR.getMinX();
+		result[1] = contentP[1] + LeftPaneR.getMinY();
+		result[2] = contentP[0] + LeftPaneR.getMaxX();
+		result[3] = contentP[1] + LeftPaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getRightPanePosition(){
+		double [] result = new double[4];
+		Rectangle RightPaneR = rightPane.getBounds();
+		double [] contentP = getContentPanePosition();
+		
+		
+		result[0] = contentP[0] + RightPaneR.getMinX();
+		result[1] = contentP[1] + RightPaneR.getMinY();
+		result[2] = contentP[0] + RightPaneR.getMaxX();
+		result[3] = contentP[1] + RightPaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getImdbTitlePanePosition(){
+		double [] result = new double[4];
+		Rectangle ImdbTitlePaneR = imdbTitle.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + ImdbTitlePaneR.getMinX();
+		result[1] = leftP[1] + ImdbTitlePaneR.getMinY();
+		result[2] = leftP[0] + ImdbTitlePaneR.getMaxX();
+		result[3] = leftP[1] + ImdbTitlePaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getCsfdTitlePanePosition(){
+		double [] result = new double[4];
+		Rectangle CsfdTitlePaneR = csfdTitle.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + CsfdTitlePaneR.getMinX();
+		result[1] = leftP[1] + CsfdTitlePaneR.getMinY();
+		result[2] = leftP[0] + CsfdTitlePaneR.getMaxX();
+		result[3] = leftP[1] + CsfdTitlePaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getDescriptionPanePosition(){
+		double [] result = new double[4];
+		Rectangle descriptionPaneR = description.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + descriptionPaneR.getMinX();
+		result[1] = leftP[1] + descriptionPaneR.getMinY();
+		result[2] = leftP[0] + descriptionPaneR.getMaxX();
+		result[3] = leftP[1] + descriptionPaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getFooterPanePosition(){
+		double [] result = new double[4];
+		Rectangle footerPaneR = footer.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + footerPaneR.getMinX();
+		result[1] = leftP[1] + footerPaneR.getMinY();
+		result[2] = leftP[0] + footerPaneR.getMaxX();
+		result[3] = leftP[1] + footerPaneR.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getNextBtnPosition(){
+		double [] result = new double[4];
+		Rectangle nextBtn = next.getBounds();
+		double [] footerP = getFooterPanePosition();
+		
+		
+		result[0] = footerP[0] + nextBtn.getMinX();
+		result[1] = footerP[1] + nextBtn.getMinY();
+		result[2] = footerP[0] + nextBtn.getMaxX();
+		result[3] = footerP[1] + nextBtn.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getImdbLabelPosition(){
+		double [] result = new double[4];
+		Rectangle imdbLabel = imdbTitleLabel.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + imdbLabel.getMinX();
+		result[1] = leftP[1] + imdbLabel.getMinY();
+		result[2] = leftP[0] + imdbLabel.getMaxX();
+		result[3] = leftP[1] + imdbLabel.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getCsfdLabelPosition(){
+		double [] result = new double[4];
+		Rectangle csfdLabel = csfdTitleLabel.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + csfdLabel.getMinX();
+		result[1] = leftP[1] + csfdLabel.getMinY();
+		result[2] = leftP[0] + csfdLabel.getMaxX();
+		result[3] = leftP[1] + csfdLabel.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getDescLabelPosition(){
+		double [] result = new double[4];
+		Rectangle descLabel = descriptionLabel.getBounds();
+		double [] leftP = getLefttPanePosition();
+		
+		
+		result[0] = leftP[0] + descLabel.getMinX();
+		result[1] = leftP[1] + descLabel.getMinY();
+		result[2] = leftP[0] + descLabel.getMaxX();
+		result[3] = leftP[1] + descLabel.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getIdLabelPosition(){
+		double [] result = new double[4];
+		Rectangle idLabel = id.getBounds();
+		double [] footerP = getFooterPanePosition();
+		
+		
+		result[0] = footerP[0] + idLabel.getMinX();
+		result[1] = footerP[1] + idLabel.getMinY();
+		result[2] = footerP[0] + idLabel.getMaxX();
+		result[3] = footerP[1] + idLabel.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getCategoryPosition(Rectangle category){
+		double [] result = new double[4];
+		double [] rightP = getRightPanePosition();
+		
+		
+		result[0] = rightP[0] + category.getMinX();
+		result[1] = rightP[1] + category.getMinY();
+		result[2] = rightP[0] + category.getMaxX();
+		result[3] = rightP[1] + category.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getImdbTitlePosition(Rectangle title){
+		double [] result = new double[4];
+		double [] imdbP = getImdbTitlePanePosition();
+		
+		
+		result[0] = imdbP[0] + title.getMinX();
+		result[1] = imdbP[1] + title.getMinY();
+		result[2] = imdbP[0] + title.getMaxX();
+		result[3] = imdbP[1] + title.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getCsfdTitlePosition(Rectangle title){
+		double [] result = new double[4];
+		double [] csfdP = getCsfdTitlePanePosition();
+		
+		
+		result[0] = csfdP[0] + title.getMinX();
+		result[1] = csfdP[1] + title.getMinY();
+		result[2] = csfdP[0] + title.getMaxX();
+		result[3] = csfdP[1] + title.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getDescriptionPosition(Rectangle title){
+		double [] result = new double[4];
+		double [] descriptionP = getDescriptionPanePosition();
+		
+		
+		result[0] = descriptionP[0] + title.getMinX();
+		result[1] = descriptionP[1] + title.getMinY();
+		result[2] = descriptionP[0] + title.getMaxX();
+		result[3] = descriptionP[1] + title.getMaxY();
+		
+		return result;
+	}
+	
+	public void logPanelPostiions(){	
 		Classifier.log.println("panel positions:");
-		Classifier.log.println(this.getBounds() + " - frame");
-		Classifier.log.println(contentPane.getBounds() + " - contentPane");
-		Classifier.log.println(leftPane.getBounds() + " - leftPane");
-		Classifier.log.println(rightPane.getBounds() + " - rightPane");
-		Classifier.log.println(imdbTitle.getBounds() + " - imdbTitle panel");
-		Classifier.log.println(csfdTitle.getBounds() + " - csfdTitle panel");
-		Classifier.log.println(description.getBounds() + " - description panel");
-		Classifier.log.println(footer.getBounds() + " - footer panel");
+		
+		double [] frameP = getFramePosition();
+		Classifier.log.println(frameP[0] + " " + frameP[1] + " " + frameP[2] + " " + frameP[3] + " - frame");
+		
+		double [] contentP = getContentPanePosition();
+		Classifier.log.println(contentP[0] + " " + contentP[1] + " " + contentP[2] + " " + contentP[3] + " - contentPane");
+		
+		double [] LeftP = getLefttPanePosition();
+		Classifier.log.println(LeftP[0] + " " + LeftP[1] + " " + LeftP[2] + " " + LeftP[3] + " - leftPane");
+		
+		double [] RightP = getRightPanePosition();
+		Classifier.log.println(RightP[0] + " " + RightP[1] + " " + RightP[2] + " " + RightP[3] + " - rightPane");
+		
+		double [] imdbTitleP = getImdbTitlePanePosition();
+		Classifier.log.println(imdbTitleP[0] + " " + imdbTitleP[1] + " " + imdbTitleP[2] + " " + imdbTitleP[3] + " - imdbTitlePane");
+		
+		double [] csfdTitleP = getCsfdTitlePanePosition();
+		Classifier.log.println(csfdTitleP[0] + " " + csfdTitleP[1] + " " + csfdTitleP[2] + " " + csfdTitleP[3] + " - csfdTitlePane");
+		
+		double [] descriptionP = getDescriptionPanePosition();
+		Classifier.log.println(descriptionP[0] + " " + descriptionP[1] + " " + descriptionP[2] + " " + descriptionP[3] + " - descriptionPane");
+		
+		double [] footerP = getFooterPanePosition();
+		Classifier.log.println(footerP[0] + " " + footerP[1] + " " + footerP[2] + " " + footerP[3] + " - footerPane");
 	}
 	
 	public void logButtonPositions(){
 		Classifier.log.println(Classifier.getTime() + " Button positions:");
-		Classifier.log.println(next.getBounds() + " - next");
+		
+		double [] nextP = getNextBtnPosition();
+		Classifier.log.println(nextP[0] + " " + nextP[1] + " " + nextP[2] + " " + nextP[3] + " - Next button");
 	}
 	
 	public void logLabelPositions(){
 		Classifier.log.println(Classifier.getTime() + " Label positions:");
-		Classifier.log.println(imdbTitleLabel.getBounds() + " - imdb title label");
-		Classifier.log.println(csfdTitleLabel.getBounds() + " - csfd title label");
-		Classifier.log.println(descriptionLabel.getBounds() + " - description label");
-		Classifier.log.println(id.getBounds() + " - id label");
+		
+		double [] imdbLabelP = getImdbLabelPosition();
+		Classifier.log.println(imdbLabelP[0] + " " + imdbLabelP[1] + " " + imdbLabelP[2] + " " + imdbLabelP[3] + " - imdb title label");
+		
+		double [] csfdLabelP = getCsfdLabelPosition();
+		Classifier.log.println(csfdLabelP[0] + " " + csfdLabelP[1] + " " + csfdLabelP[2] + " " + csfdLabelP[3] + " - csfd title label");
+		
+		double [] descLabelP = getDescLabelPosition();
+		Classifier.log.println(descLabelP[0] + " " + descLabelP[1] + " " + descLabelP[2] + " " + descLabelP[3] + " - description label");
+		
+		double [] idLabelP = getIdLabelPosition();
+		Classifier.log.println(idLabelP[0] + " " + idLabelP[1] + " " + idLabelP[2] + " " + idLabelP[3] + " - id label");
 	}
 	
 	public void logCategoryPositions(){
 		Classifier.log.println(Classifier.getTime() + " Category positions:");
 		rightPane.validate();
 		
-		for(int i=0; i<Classifier.CATEGORY_COUNT; i++){					
-			Classifier.log.println(group.get(i).getBounds() + " - " + group.get(i).getText());
+		for(int i=0; i<Classifier.CATEGORY_COUNT; i++){			
+			double [] categoryP = getCategoryPosition(category_panels.get(i).getBounds());
+			Classifier.log.println(categoryP[0] + " " + categoryP[1] + " " + categoryP[2] + " " + categoryP[3] + " " + group.get(i).getText());
 		}
 	}
 	
@@ -301,7 +566,8 @@ public class Window extends JFrame {
 		Classifier.log.println(Classifier.getTime() + " IMDB Title text positions:");
 		int size = imdbTitleList.size();
 		for(int i=0; i<size; i++){
-			Classifier.log.println(imdbTitleList.get(i).getBounds() + " - " + imdbTitleList.get(i).getText());
+			double [] titleP = getImdbTitlePosition(imdbTitleList.get(i).getBounds());
+			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + imdbTitleList.get(i).getText());
 		}
 	}
 	
@@ -310,7 +576,8 @@ public class Window extends JFrame {
 		Classifier.log.println(Classifier.getTime() + " CSFD Title text positions:");
 		int size = csfdTitleList.size();
 		for(int i=0; i<size; i++){
-			Classifier.log.println(csfdTitleList.get(i).getBounds() + " - " + csfdTitleList.get(i).getText());
+			double [] titleP = getCsfdTitlePosition(csfdTitleList.get(i).getBounds());
+			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + csfdTitleList.get(i).getText());
 		}
 	}
 	
@@ -319,8 +586,13 @@ public class Window extends JFrame {
 		Classifier.log.println(Classifier.getTime() + " Description text positions:");
 		int size = descriptionList.size();
 		for(int i=0; i<size; i++){
-			Classifier.log.println(descriptionList.get(i).getBounds() + " - " + descriptionList.get(i).getText());
+			double [] titleP = getDescriptionPosition(descriptionList.get(i).getBounds());
+			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + descriptionList.get(i).getText());
 		}
+	}
+	
+	public void setBtnLbl(String text){
+		next.setText(text);
 	}
 
 	/**
@@ -437,15 +709,16 @@ public class Window extends JFrame {
 						System.exit(EXIT_ON_CLOSE);
 					}
 					
-					if(next == Classifier.COUNT){
-						Window.this.next.setText("Finish");
-					}
-					
 					clearContent();
 					try {
 						Classifier.parseMovie(Classifier.next);
 					} catch (IOException | ParseException e1) {
 						e1.printStackTrace();
+					}
+					
+					setBtnLbl("Next  " + (Classifier.next + 1) + "/" + Classifier.COUNT);
+					if(next == Classifier.COUNT){
+						Window.this.next.setText("Finish");
 					}
 					
 					validate();
