@@ -14,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
 
 import javax.swing.JFileChooser;
 
@@ -27,7 +26,7 @@ import gui.Window;
 
 public class Classifier {
 	 public static final int CATEGORY_COUNT = 30;
-	 public static final int COUNT = 10;
+	 public static int COUNT;
 	 public static int next = 0;
 	 private static JSONParser parser;
 	 private static JSONArray data;
@@ -38,6 +37,7 @@ public class Classifier {
 	 public static Log jsonLog;
 	 public static SimpleDateFormat date;
 	 public static Date time;
+	 public static Movie currentMovie;
 	public static Window gui_frame;
 	public static String[] categories = {"Art and Artists","Media","Biography","Comedy","Conspiracy","Crime","Drugs","Military and War","Politics","Psychology",
 		"Environment","Nature","Health","Society","Philosophy","Mystery","Religion","Economics","History","Science","Technology",
@@ -110,6 +110,7 @@ public class Classifier {
 		jsonLog.setSourceFile(selectedFile.getName());
 		
 		data = (JSONArray) parser.parse(file);
+		COUNT = data.size();
 		
 		result = new JSONArray();
 		
@@ -118,14 +119,7 @@ public class Classifier {
 		gui_frame.setBtnLbl("Next  " + (next + 1) + "/" + COUNT);
 		
 		gui_frame.validate();
-		gui_frame.logPanelPostiions();
-		gui_frame.logButtonPositions();
-		gui_frame.logLabelPositions();
-		gui_frame.logCategoryPositions();
-		gui_frame.logImdbTitle();
-		gui_frame.logcsfdTitle();
-		gui_frame.logDescription();
-		
+		gui_frame.logCategoryPositions();		
 	}
 	
 	public static String[] splitString(String string){
@@ -134,6 +128,10 @@ public class Classifier {
 	}
 	
 	public static void parseMovie(int i) throws FileNotFoundException, IOException, ParseException{
+		if(currentMovie != null){
+			jsonLog.addMovie(Classifier.currentMovie);
+		}
+		
 		JSONObject movie = (JSONObject) data.get(i);
 
 		String id = movie.get("id").toString();
@@ -152,6 +150,16 @@ public class Classifier {
 		String s = "displayed content of movie ID=" +id;
 		log.println(getTime(time) + " " +s );
 		jsonLog.addEvent(new Event(getTime(time), s));
+		
+		currentMovie = new Movie(id, getTime(time));
+		
+		gui_frame.validate();
+		gui_frame.logPanelPostiions();
+		gui_frame.logButtonPositions();
+		gui_frame.logLabelPositions();
+		gui_frame.logImdbTitle();
+		gui_frame.logcsfdTitle();
+		gui_frame.logDescription();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -187,6 +195,7 @@ public class Classifier {
 		
 		JSONObject positions = new JSONObject();
 		positions.put("categories", jsonLog.getCategories());
+		positions.put("movies", jsonLog.getMovies());
 		
 		jResult.put("positions", positions);
 			

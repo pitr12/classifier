@@ -10,11 +10,13 @@ public class Log {
 	private String sourceFile;
 	private JSONArray events;
 	private JSONArray categories;
+	private JSONArray movies;
 	
 	public Log(){
 		this.screenResolution = new JSONArray();
 		this.events = new JSONArray();
 		this.categories = new JSONArray();
+		this.movies = new JSONArray();
 	}
 
 	public String getLogInitTime() {
@@ -31,6 +33,10 @@ public class Log {
 	
 	public JSONArray getCategories() {
 		return categories;
+	}
+	
+	public JSONArray getMovies(){
+		return movies;
 	}
 	
 	public JSONArray getScreenResolution() {
@@ -73,5 +79,20 @@ public class Log {
 		o.put("name", c.getName());
 		o.put("position", c.getPosition());
 		categories.add(o);
+	}	
+	
+	@SuppressWarnings("unchecked")
+	public void addMovie(Movie m) {
+		JSONObject o = new JSONObject();
+		o.put("id", m.getMovieID());
+		o.put("panelPositions", m.getPanelPositions());
+		o.put("labelPositions", m.getLabelPositions());
+		o.put("imdbTtile", m.getImdbTtile());
+		o.put("csfdTtile", m.getCsfdTtile());
+		o.put("description", m.getDescription());
+		o.put("nextBtn", m.getNextBtn());
+		o.put("startTime", m.getStartTime());
+		o.put("endTime", m.getEndTime());
+		movies.add(o);
 	}	
 }

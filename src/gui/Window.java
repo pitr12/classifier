@@ -1,21 +1,15 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -28,12 +22,13 @@ import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
 
 import org.json.simple.parser.ParseException;
-import org.omg.CORBA.FREE_MEM;
 
 import work.Category;
 import work.Classifier;
 import work.Event;
+import work.Word;
 
+@SuppressWarnings("serial")
 public class Window extends JFrame {
 	
 	//fonts
@@ -89,7 +84,7 @@ public class Window extends JFrame {
 	}
 	
 	public String getName(){
-		return this.name;
+		return name;
 	}
 	
 	public static void constructCategory(String name, final int index){
@@ -217,6 +212,7 @@ public class Window extends JFrame {
 		description.repaint();
 	}
 	
+	@SuppressWarnings("static-access")
 	public boolean checkPrimaryCategory(){
 		int count = 0;
 		for(Integer state : states){
@@ -242,6 +238,7 @@ public class Window extends JFrame {
 		return false;
 	}
 	
+	@SuppressWarnings("static-access")
 	public boolean checkSecondaryCategory(){
 		int count = 0;
 		for(Integer state : states){
@@ -538,6 +535,8 @@ public class Window extends JFrame {
 		
 		double [] footerP = getFooterPanePosition();
 		Classifier.log.println(footerP[0] + " " + footerP[1] + " " + footerP[2] + " " + footerP[3] + " - footerPane");
+		
+		Classifier.currentMovie.setPanelPositions(frameP, contentP, LeftP, RightP, imdbTitleP, csfdTitleP, descriptionP, footerP);
 	}
 	
 	public void logButtonPositions(){
@@ -546,6 +545,7 @@ public class Window extends JFrame {
 		
 		double [] nextP = getNextBtnPosition();
 		Classifier.log.println(nextP[0] + " " + nextP[1] + " " + nextP[2] + " " + nextP[3] + " - Next button");
+		Classifier.currentMovie.setBtnPosition(nextP);
 	}
 	
 	public void logLabelPositions(){
@@ -563,6 +563,8 @@ public class Window extends JFrame {
 		
 		double [] idLabelP = getIdLabelPosition();
 		Classifier.log.println(idLabelP[0] + " " + idLabelP[1] + " " + idLabelP[2] + " " + idLabelP[3] + " - id label");
+		
+		Classifier.currentMovie.setLabelPositions(imdbLabelP, csfdLabelP, descLabelP, idLabelP);
 	}
 	
 	public void logCategoryPositions(){
@@ -585,6 +587,7 @@ public class Window extends JFrame {
 		for(int i=0; i<size; i++){
 			double [] titleP = getImdbTitlePosition(imdbTitleList.get(i).getBounds());
 			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + imdbTitleList.get(i).getText());
+			Classifier.currentMovie.addWordToImdbTitle(new Word(imdbTitleList.get(i).getText(), titleP));
 		}
 	}
 	
@@ -596,6 +599,7 @@ public class Window extends JFrame {
 		for(int i=0; i<size; i++){
 			double [] titleP = getCsfdTitlePosition(csfdTitleList.get(i).getBounds());
 			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + csfdTitleList.get(i).getText());
+			Classifier.currentMovie.addWordToCsfdTitle(new Word(csfdTitleList.get(i).getText(), titleP));
 		}
 	}
 	
@@ -607,6 +611,7 @@ public class Window extends JFrame {
 		for(int i=0; i<size; i++){
 			double [] titleP = getDescriptionPosition(descriptionList.get(i).getBounds());
 			Classifier.log.println(titleP[0] + " " + titleP[1] + " " + titleP[2] + " " + titleP[3] + " " + descriptionList.get(i).getText());
+			Classifier.currentMovie.addWordToDescription(new Word(descriptionList.get(i).getText(), titleP));
 		}
 	}
 	
@@ -623,6 +628,7 @@ public class Window extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//setBounds(0, 0, 500, 500);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		setTitle("Classifier");
 		
 		//create content pane
 		contentPane = new JPanel();
@@ -717,12 +723,13 @@ public class Window extends JFrame {
 				
 				if(checkValidity()){
 					Classifier.addResult(Classifier.next - 1);
+					Classifier.currentMovie.setEndTime(Classifier.getTime(Classifier.time));
 					int next = Classifier.next + 1;
 					
 					if(next > Classifier.COUNT){
 						try {
 							Classifier.saveResult();
-							Classifier.time = new Date();
+							Classifier.jsonLog.addMovie(Classifier.currentMovie);
 							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
 							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
 							Classifier.log.close();
@@ -733,25 +740,20 @@ public class Window extends JFrame {
 						System.exit(EXIT_ON_CLOSE);
 					}
 					
-					clearContent();
-					try {
-						Classifier.parseMovie(Classifier.next);
-					} catch (IOException | ParseException e1) {
-						e1.printStackTrace();
-					}
 					
-					setBtnLbl("Next  " + (Classifier.next + 1) + "/" + Classifier.COUNT);
+					clearContent();
+					
+					setBtnLbl("Next  " + (Classifier.next + 2) + "/" + Classifier.COUNT);
 					if(next == Classifier.COUNT){
 						Window.this.next.setText("Finish");
 					}
 					
-					validate();
-					logPanelPostiions();
-					logButtonPositions();
-					logLabelPositions();
-					logImdbTitle();
-					logcsfdTitle();
-					logDescription();
+					try {
+						
+						Classifier.parseMovie(Classifier.next);
+					} catch (IOException | ParseException e1) {
+						e1.printStackTrace();
+					}
 				}
 				
 			}
