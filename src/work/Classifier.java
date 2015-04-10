@@ -11,8 +11,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Date;
 
 import javax.swing.JFileChooser;
@@ -39,12 +37,12 @@ public class Classifier {
 	 public static Date time;
 	 public static Movie currentMovie;
 	public static Window gui_frame;
-	public static String[] categories = {"Art and Artists","Media","Biography","Comedy","Conspiracy","Crime","Drugs","Military and War","Politics","Psychology",
-		"Environment","Nature","Health","Society","Philosophy","Mystery","Religion","Economics","History","Science","Technology",
-		"Sports","Traveling","Catastriphic","Nothing","Adventure","Culture","Housing","Geography","Animals"};
+	public static String[] categories = {"Technology","Mystery","Science","Catastrophic","Nature","Animals","Geography","Adventure","Environment","Traveling",
+		"Health","Drugs","Economics","Crime","Politics","Biography","Society","Religion","Culture","Psychology","Philosophy","Art and Artists","History",
+		"Conspiracy","Military and War","Media","Comedy", "Housing","Sports","I can't do this"};
  
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {	
-		Collections.shuffle(Arrays.asList(categories));
+		//Collections.shuffle(Arrays.asList(categories));
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

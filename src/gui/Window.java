@@ -33,6 +33,7 @@ public class Window extends JFrame {
 	
 	//fonts
 	private static Font globalBoldFont = new Font("Courier 10 Pitch", Font.BOLD, 24);
+	private static Font globalPlainFontSmaller = new Font("Courier 10 Pitch", Font.PLAIN, 22);
 	private static Font MsgFont = new Font("Courier 10 Pitch", Font.BOLD, 20);
 	private static Font globalPlainFont = new Font("Courier 10 Pitch", Font.PLAIN, 24);
 	private static Font categorySmallLabelFont = new Font("Courier 10 Pitch", Font.PLAIN,16);
@@ -93,7 +94,7 @@ public class Window extends JFrame {
 		panel.setLayout(categoryLayout);
 		
 		JRadioButton button = new JRadioButton(name);
-		button.setFont(globalPlainFont);
+		button.setFont(globalPlainFontSmaller);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeButtonState(index);
