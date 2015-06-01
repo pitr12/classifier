@@ -26,6 +26,7 @@ public class Classifier {
 	 public static final int CATEGORY_COUNT = 30;
 	 public static int COUNT;
 	 public static int next = 0;
+	 public static int confidence = 0;
 	 private static JSONParser parser;
 	 private static JSONArray data;
 	 private static JSONArray result;
@@ -37,6 +38,7 @@ public class Classifier {
 	 public static Date time;
 	 public static Movie currentMovie;
 	public static Window gui_frame;
+	public static String absolutePath;
 	public static String[] categories = {"Technology","Mystery","Science","Catastrophic","Nature","Animals","Geography","Adventure","Environment","Traveling",
 		"Health","Drugs","Economics","Crime","Politics","Biography","Society","Religion","Culture","Psychology","Philosophy","Art and Artists","History",
 		"Conspiracy","Military and War","Media","Comedy", "Housing","Sports","I can't do this"};
@@ -69,8 +71,9 @@ public class Classifier {
 	}
 	
 	public static void classify() throws FileNotFoundException, IOException, ParseException{
+		absolutePath = new File(".").getCanonicalPath();
 		parser = new JSONParser();
-		new File("./output").mkdir();
+		new File(absolutePath+"/output").mkdir();
 		
 		//select input file
 		final JFileChooser fc = new JFileChooser();
@@ -83,7 +86,7 @@ public class Classifier {
 	    Window.loadUserName();
 	    
 	    //initialize log file
-	  	String fileName = "./output/" + gui_frame.getName() + ".log";
+	  	String fileName = absolutePath+"/output/" + gui_frame.getName() + ".log";
 	  	log = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
 	  	jsonLog = new Log();
 	  		
@@ -114,7 +117,6 @@ public class Classifier {
 		
 		parseMovie(0);
 		
-		gui_frame.setBtnLbl("Next  " + (next + 1) + "/" + COUNT);
 		
 		gui_frame.validate();
 		gui_frame.logCategoryPositions();		
@@ -137,6 +139,7 @@ public class Classifier {
 		String []csfdTitle = splitString((String) movie.get("csfd_title"));
 		String[] description = splitString((String) movie.get("imdb_desc"));
 		
+		gui_frame.setPosition(Integer.toString(i+1) + " / " + COUNT);
 		gui_frame.setId(id);
 		gui_frame.setImdbTitle(title);
 		gui_frame.setcsfdTitle(csfdTitle);
@@ -165,11 +168,12 @@ public class Classifier {
 		JSONObject movie = (JSONObject) data.get(i);
 		 movie.put("primary_category", Window.getPrimaryCategory());	
 		 movie.put("secondary_category", Window.getSecondaryCategory());
+		 movie.put("confidence", confidence);
 		 result.add(movie);
 	}
 	
 	public static void saveResult() throws IOException{
-		String resultfileName = "./output/"+gui_frame.getName() + "_result.json";
+		String resultfileName = absolutePath+"/output/"+gui_frame.getName() + "_result.json";
 		FileWriter file = new FileWriter(resultfileName);
         try {
             file.write(result.toJSONString());
@@ -198,7 +202,7 @@ public class Classifier {
 		jResult.put("positions", positions);
 			
 		//save JSON log
-		String resultfileName = "./output/"+gui_frame.getName() + "_log.json";
+		String resultfileName = absolutePath+"/output/"+gui_frame.getName() + "_log.json";
 		FileWriter file = new FileWriter(resultfileName);
         try {
             file.write(jResult.toJSONString());

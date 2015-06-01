@@ -10,7 +10,9 @@ public class Movie {
 	private JSONArray imdbTtitle;
 	private JSONArray csfdTtitle;
 	private JSONArray description;
-	private JSONArray nextBtn;
+	private JSONArray nextBtn100;
+	private JSONArray nextBtn200;
+	private JSONArray nextBtn300;
 	private String startTime;
 	private String endTime;
 	
@@ -23,7 +25,9 @@ public class Movie {
 		imdbTtitle = new JSONArray();
 		csfdTtitle = new JSONArray();
 		description = new JSONArray();
-		nextBtn = new JSONArray();
+		nextBtn100 = new JSONArray();
+		nextBtn200 = new JSONArray();
+		nextBtn300 = new JSONArray();
 	}
 	
 	public void setEndTime(String time){
@@ -31,9 +35,23 @@ public class Movie {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void setBtnPosition(double [] arr){
+	public void setBtn100Position(double [] arr){
 		for(int i=0; i<4; i++){
-			nextBtn.add(arr[i]);
+			nextBtn100.add(arr[i]);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void setBtn200Position(double [] arr){
+		for(int i=0; i<4; i++){
+			nextBtn200.add(arr[i]);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void setBtn300Position(double [] arr){
+		for(int i=0; i<4; i++){
+			nextBtn300.add(arr[i]);
 		}
 	}
 	
@@ -71,23 +89,26 @@ public class Movie {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void setLabelPositions(double[] imdbP, double[] csfdP, double[] descP, double[] idP){
+	public void setLabelPositions(double[] imdbP, double[] csfdP, double[] descP, double[] idP, double[] posP){
 		JSONArray imdbL = new JSONArray();
 		JSONArray csfdL = new JSONArray();
 		JSONArray descL = new JSONArray();
 		JSONArray idL = new JSONArray();
+		JSONArray posL = new JSONArray();
 		
 		for(int i=0; i<4; i++){
 			imdbL.add(imdbP[i]);
 			csfdL.add(csfdP[i]);
 			descL.add(descP[i]);
 			idL.add(idP[i]);
+			posL.add(posP[i]);
 		}
 		
 		labelPositions.put("imdbTitleLabel", imdbL);
 		labelPositions.put("csfdTitleLabel", csfdL);
 		labelPositions.put("descriptionLabel", descL);
 		labelPositions.put("idLabel", idL);
+		labelPositions.put("positionLabel", posL);
 	}
 
 	public String getMovieID() {
@@ -115,7 +136,15 @@ public class Movie {
 	}
 
 	public JSONArray getNextBtn() {
-		return nextBtn;
+		return nextBtn100;
+	}
+	
+	public JSONArray getNextBtn200() {
+		return nextBtn200;
+	}
+	
+	public JSONArray getNextBtn300() {
+		return nextBtn300;
 	}
 	
 	public String getStartTime(){

@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -33,10 +34,12 @@ public class Window extends JFrame {
 	
 	//fonts
 	private static Font globalBoldFont = new Font("Courier 10 Pitch", Font.BOLD, 24);
-	private static Font globalPlainFontSmaller = new Font("Courier 10 Pitch", Font.PLAIN, 22);
+	private static Font globalPlainFontSmaller = new Font("Courier 10 Pitch", Font.PLAIN, 12);
 	private static Font MsgFont = new Font("Courier 10 Pitch", Font.BOLD, 20);
 	private static Font globalPlainFont = new Font("Courier 10 Pitch", Font.PLAIN, 24);
+	private static Font globalPlainFontBtn = new Font("Courier 10 Pitch", Font.PLAIN, 12);
 	private static Font categorySmallLabelFont = new Font("Courier 10 Pitch", Font.PLAIN,16);
+	private static Font smallBoldFont = new Font("Courier 10 Pitch", Font.BOLD,16);
 	
 	//panels
 	private JPanel contentPane;
@@ -52,9 +55,12 @@ public class Window extends JFrame {
 	private JLabel csfdTitleLabel;
 	private JLabel descriptionLabel;
 	private JLabel id;
+	private JLabel position;
 	
 	//buttons
 	private JButton next;
+	private JButton next2;
+	private JButton next3;
 	
 	//araylists
 	private static int[] states = new int [Classifier.CATEGORY_COUNT];
@@ -95,6 +101,9 @@ public class Window extends JFrame {
 		
 		JRadioButton button = new JRadioButton(name);
 		button.setFont(globalPlainFontSmaller);
+		if(index == (Classifier.CATEGORY_COUNT - 1)){
+			button.setForeground(Color.GRAY);
+		}
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				changeButtonState(index);
@@ -169,6 +178,11 @@ public class Window extends JFrame {
 	public void setId(String new_id){
 		String text = "ID: " +new_id;
 		id.setText(text);
+	}
+	
+	public void setPosition(String new_id){
+		String text = "Pos: " +new_id;
+		position.setText(text);
 	}
 	
 	public void setImdbTitle(String[] title) {
@@ -388,9 +402,37 @@ public class Window extends JFrame {
 		return result;
 	} 
 	
-	public double[] getNextBtnPosition(){
+	public double[] getNextBtn100Position(){
 		double [] result = new double[4];
 		Rectangle nextBtn = next.getBounds();
+		double [] footerP = getFooterPanePosition();
+		
+		
+		result[0] = footerP[0] + nextBtn.getMinX();
+		result[1] = footerP[1] + nextBtn.getMinY();
+		result[2] = footerP[0] + nextBtn.getMaxX();
+		result[3] = footerP[1] + nextBtn.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getNextBtn200Position(){
+		double [] result = new double[4];
+		Rectangle nextBtn = next2.getBounds();
+		double [] footerP = getFooterPanePosition();
+		
+		
+		result[0] = footerP[0] + nextBtn.getMinX();
+		result[1] = footerP[1] + nextBtn.getMinY();
+		result[2] = footerP[0] + nextBtn.getMaxX();
+		result[3] = footerP[1] + nextBtn.getMaxY();
+		
+		return result;
+	} 
+	
+	public double[] getNextBtn300Position(){
+		double [] result = new double[4];
+		Rectangle nextBtn = next3.getBounds();
 		double [] footerP = getFooterPanePosition();
 		
 		
@@ -454,6 +496,20 @@ public class Window extends JFrame {
 		result[1] = footerP[1] + idLabel.getMinY();
 		result[2] = footerP[0] + idLabel.getMaxX();
 		result[3] = footerP[1] + idLabel.getMaxY();
+		
+		return result;
+	}
+	
+	public double[] getPosLabelPosition(){
+		double [] result = new double[4];
+		Rectangle posLabel = position.getBounds();
+		double [] footerP = getFooterPanePosition();
+		
+		
+		result[0] = footerP[0] + posLabel.getMinX();
+		result[1] = footerP[1] + posLabel.getMinY();
+		result[2] = footerP[0] + posLabel.getMaxX();
+		result[3] = footerP[1] + posLabel.getMaxY();
 		
 		return result;
 	}
@@ -544,9 +600,17 @@ public class Window extends JFrame {
 		Classifier.time = new Date();
 		Classifier.log.println(Classifier.getTime(Classifier.time) + " Button positions:");
 		
-		double [] nextP = getNextBtnPosition();
-		Classifier.log.println(nextP[0] + " " + nextP[1] + " " + nextP[2] + " " + nextP[3] + " - Next button");
-		Classifier.currentMovie.setBtnPosition(nextP);
+		double [] nextP = getNextBtn100Position();
+		Classifier.log.println(nextP[0] + " " + nextP[1] + " " + nextP[2] + " " + nextP[3] + " - Next button 100");
+		Classifier.currentMovie.setBtn100Position(nextP);
+		
+		double [] nextP2 = getNextBtn200Position();
+		Classifier.log.println(nextP2[0] + " " + nextP2[1] + " " + nextP2[2] + " " + nextP2[3] + " - Next button 200");
+		Classifier.currentMovie.setBtn200Position(nextP2);
+		
+		double [] nextP3 = getNextBtn300Position();
+		Classifier.log.println(nextP3[0] + " " + nextP3[1] + " " + nextP3[2] + " " + nextP3[3] + " - Next button 300");
+		Classifier.currentMovie.setBtn300Position(nextP3);
 	}
 	
 	public void logLabelPositions(){
@@ -565,7 +629,10 @@ public class Window extends JFrame {
 		double [] idLabelP = getIdLabelPosition();
 		Classifier.log.println(idLabelP[0] + " " + idLabelP[1] + " " + idLabelP[2] + " " + idLabelP[3] + " - id label");
 		
-		Classifier.currentMovie.setLabelPositions(imdbLabelP, csfdLabelP, descLabelP, idLabelP);
+		double [] posLabelP = getPosLabelPosition();
+		Classifier.log.println(posLabelP[0] + " " + posLabelP[1] + " " + posLabelP[2] + " " + posLabelP[3] + " - pos label");
+		
+		Classifier.currentMovie.setLabelPositions(imdbLabelP, csfdLabelP, descLabelP, idLabelP, posLabelP);
 	}
 	
 	public void logCategoryPositions(){
@@ -701,28 +768,36 @@ public class Window extends JFrame {
 		
 		//left panel footer
 		footer = new JPanel();
-		footer.setLayout(new GridLayout());
+		GridLayout footerLayout = new GridLayout(1,5);
+		footerLayout.setHgap(25);
+		footer.setLayout(footerLayout);
 		c.gridy = 6;
 		c.weighty = 0.025;
 		c.fill = GridBagConstraints.NONE;
 		leftPane.add(footer, c);	
 		
 		//id label
+		position = new JLabel("Pos:");
+		position.setFont(smallBoldFont);
+		footer.add(position);
+		
+		//id label
 		id = new JLabel("ID:");
 		id.setFont(categorySmallLabelFont);
 		footer.add(id);
 		
-		//button next
-		next = new JButton("Next");
-		next.setFont(globalPlainFont);
+		//button next 100
+		next = new JButton("1");
+		next.setFont(globalPlainFontBtn);
 		next.setBorder(new EmptyBorder(10,50,10,50));
 		next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Classifier.time = new Date();
-				Classifier.log.println(Classifier.getTime(Classifier.time) + " clicked button Next");
-				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Clicked button Next"));
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " clicked button 100");
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Clicked button 100"));
 				
 				if(checkValidity()){
+					Classifier.confidence = 100;
 					Classifier.addResult(Classifier.next - 1);
 					Classifier.currentMovie.setEndTime(Classifier.getTime(Classifier.time));
 					int next = Classifier.next + 1;
@@ -744,11 +819,6 @@ public class Window extends JFrame {
 					
 					clearContent();
 					
-					setBtnLbl("Next  " + (Classifier.next + 2) + "/" + Classifier.COUNT);
-					if(next == Classifier.COUNT){
-						Window.this.next.setText("Finish");
-					}
-					
 					try {
 						
 						Classifier.parseMovie(Classifier.next);
@@ -760,6 +830,95 @@ public class Window extends JFrame {
 			}
 		});
 		footer.add(next);
+		
+		//button next 200
+		next2 = new JButton("2");
+		next2.setFont(globalPlainFontBtn);
+		next2.setBorder(new EmptyBorder(10,50,10,50));
+		next2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Classifier.time = new Date();
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " clicked button 200");
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Clicked button 200"));
+				
+				if(checkValidity()){
+					Classifier.confidence = 200;
+					Classifier.addResult(Classifier.next - 1);
+					Classifier.currentMovie.setEndTime(Classifier.getTime(Classifier.time));
+					int next = Classifier.next + 1;
+							
+					if(next > Classifier.COUNT){
+						try {
+							Classifier.saveResult();
+							Classifier.jsonLog.addMovie(Classifier.currentMovie);
+							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
+							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
+							Classifier.log.close();
+							Classifier.constructJsonLog();
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+						System.exit(EXIT_ON_CLOSE);
+					}
+					
+							
+					clearContent();
+					
+					try {
+						Classifier.parseMovie(Classifier.next);
+					} catch (IOException | ParseException e1) {
+						e1.printStackTrace();
+					}
+				}
+				
+			}
+		});
+		footer.add(next2);
+				
+		//button next 300
+		next3 = new JButton("3");
+		next3.setFont(globalPlainFontBtn);
+		next3.setBorder(new EmptyBorder(10,50,10,50));
+		next3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Classifier.time = new Date();
+				Classifier.log.println(Classifier.getTime(Classifier.time) + " clicked button 300");
+				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Clicked button 300"));
+						
+				if(checkValidity()){
+					Classifier.confidence = 300;
+					Classifier.addResult(Classifier.next - 1);
+					Classifier.currentMovie.setEndTime(Classifier.getTime(Classifier.time));
+					int next = Classifier.next + 1;
+							
+					if(next > Classifier.COUNT){
+						try {
+							Classifier.saveResult();
+							Classifier.jsonLog.addMovie(Classifier.currentMovie);
+							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
+							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
+							Classifier.log.close();
+							Classifier.constructJsonLog();
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+						System.exit(EXIT_ON_CLOSE);
+					}
+							
+					clearContent();
+							
+					try {
+						Classifier.parseMovie(Classifier.next);
+					} catch (IOException | ParseException e1) {
+						e1.printStackTrace();
+					}
+				}
+				
+			}
+		});
+		footer.add(next3);
+				
+				
 		
 		this.addWindowListener(new java.awt.event.WindowAdapter(){
 			public void windowClosing(WindowEvent winEv){

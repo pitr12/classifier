@@ -90,7 +90,9 @@ public class Log {
 		o.put("imdbTtile", m.getImdbTtile());
 		o.put("csfdTtile", m.getCsfdTtile());
 		o.put("description", m.getDescription());
-		o.put("nextBtn", m.getNextBtn());
+		o.put("nextBtn100", m.getNextBtn());
+		o.put("nextBtn200", m.getNextBtn200());
+		o.put("nextBtn300", m.getNextBtn300());
 		o.put("startTime", m.getStartTime());
 		o.put("endTime", m.getEndTime());
 		movies.add(o);
