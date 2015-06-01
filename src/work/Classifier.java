@@ -22,11 +22,24 @@ import org.json.simple.parser.ParseException;
 
 import gui.Window;
 
+
+
+
+
+
+
+//Include the Dropbox SDK.
+import com.dropbox.core.*;
+
+import java.io.*;
+import java.util.Locale;
+
 public class Classifier {
 	 public static final int CATEGORY_COUNT = 30;
 	 public static int COUNT;
 	 public static int next = 0;
 	 public static int confidence = 0;
+	 private static DbxClient client;
 	 private static JSONParser parser;
 	 private static JSONArray data;
 	 private static JSONArray result;
@@ -43,7 +56,10 @@ public class Classifier {
 		"Health","Drugs","Economics","Crime","Politics","Biography","Society","Religion","Culture","Psychology","Philosophy","Art and Artists","History",
 		"Conspiracy","Military and War","Media","Comedy", "Housing","Sports","I can't do this"};
  
-	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {	
+	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException, DbxException {	
+		//initDropBox();
+		linkDropbBoxAccount();
+		
 		//Collections.shuffle(Arrays.asList(categories));
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -59,6 +75,54 @@ public class Classifier {
 		classify();
 	}
 	
+	public static void initDropBox() throws IOException, DbxException{
+		final String APP_KEY = "yt8x7msxfol3kcy";
+        final String APP_SECRET = "4wlmi3yvfdm6cwt";
+
+        DbxAppInfo appInfo = new DbxAppInfo(APP_KEY, APP_SECRET);
+
+        DbxRequestConfig config = new DbxRequestConfig(
+            "JavaTutorial/1.0", Locale.getDefault().toString());
+        DbxWebAuthNoRedirect webAuth = new DbxWebAuthNoRedirect(config, appInfo);
+        
+     // Have the user sign in and authorize your app.
+        String authorizeUrl = webAuth.start();
+        System.out.println("1. Go to: " + authorizeUrl);
+        System.out.println("2. Click \"Allow\" (you might have to log in first)");
+        System.out.println("3. Copy the authorization code.");
+        String code = new BufferedReader(new InputStreamReader(System.in)).readLine().trim();
+        DbxAuthFinish authFinish = webAuth.finish(code);
+        String accessToken = authFinish.accessToken;
+        System.out.println("Access token: " + accessToken);
+        client = new DbxClient(config, accessToken);
+        System.out.println("Linked account: " + client.getAccountInfo().displayName);
+	}
+	
+	public static void linkDropbBoxAccount() throws DbxException{
+		DbxRequestConfig config = new DbxRequestConfig(
+	            "JavaTutorial/1.0", Locale.getDefault().toString());
+		final String accessToken = "zHhsOYOLWfkAAAAAAAABXldaBbE5xDnJypPKGPZiVOlGhRdSgx2eIMP8aNiC2KX0";
+		client = new DbxClient(config, accessToken);
+        System.out.println("Linked account: " + client.getAccountInfo().displayName);
+		
+	}
+	
+	public static void createFolder(String folderName) throws DbxException {
+		client.createFolder("/" + folderName);
+	}
+	
+	public static void uploadToDropbox(String filePath, String fileName) throws DbxException,
+	IOException {
+		File inputFile = new File(filePath);
+		FileInputStream fis = new FileInputStream(filePath);
+		try {
+			client.uploadFile("/" + gui_frame.getName() + "/" + fileName,
+					DbxWriteMode.add(), inputFile.length(), fis);
+		} finally {
+			fis.close();
+		}
+	}
+	
 	public static void createCategories(){
 		for(int i=0; i<CATEGORY_COUNT; i++){
 			Window.constructCategory(categories[i],i);
@@ -70,7 +134,7 @@ public class Classifier {
 		return date.format(time);
 	}
 	
-	public static void classify() throws FileNotFoundException, IOException, ParseException{
+	public static void classify() throws FileNotFoundException, IOException, ParseException, DbxException{
 		absolutePath = new File(".").getCanonicalPath();
 		parser = new JSONParser();
 		new File(absolutePath+"/output").mkdir();
@@ -172,7 +236,7 @@ public class Classifier {
 		 result.add(movie);
 	}
 	
-	public static void saveResult() throws IOException{
+	public static void saveResult() throws IOException, DbxException{
 		String resultfileName = absolutePath+"/output/"+gui_frame.getName() + "_result.json";
 		FileWriter file = new FileWriter(resultfileName);
         try {
@@ -183,11 +247,13 @@ public class Classifier {
  
         }
         file.close();
+        String uploadFileName = gui_frame.getName() + "_result.json";
+        uploadToDropbox(resultfileName, uploadFileName);
 	}
 	
 	//Create and save JSON log
 	@SuppressWarnings("unchecked")
-	public static void constructJsonLog() throws IOException{
+	public static void constructJsonLog() throws IOException, DbxException{
 		JSONObject jResult = new JSONObject();
 		jResult.put("logInitTime", jsonLog.getLogInitTime());
 		jResult.put("participantName", jsonLog.getParticipantName());
@@ -212,5 +278,7 @@ public class Classifier {
  
         }
         file.close();
+        String uploadFileName = gui_frame.getName() + "_log.json";
+        uploadToDropbox(resultfileName, uploadFileName);
 	}
 }

@@ -24,6 +24,8 @@ import javax.swing.border.EmptyBorder;
 
 import org.json.simple.parser.ParseException;
 
+import com.dropbox.core.DbxException;
+
 import work.Category;
 import work.Classifier;
 import work.Event;
@@ -287,9 +289,10 @@ public class Window extends JFrame {
 		return false;
 	}
 	
-	public static void loadUserName(){
-		String str = JOptionPane.showInputDialog("Please insert your name: ");
+	public static void loadUserName() throws DbxException{
+		String str = JOptionPane.showInputDialog("Please insert your AIS name: ");
 		name = str.replaceAll("\\s+","");
+		Classifier.createFolder(name);
 	}
 	
 	public double[] getFramePosition(){
@@ -808,9 +811,14 @@ public class Window extends JFrame {
 							Classifier.jsonLog.addMovie(Classifier.currentMovie);
 							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
 							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
+							
 							Classifier.log.close();
+							String resultfileName = Classifier.absolutePath+"/output/"+ getName() + ".log";
+							String uploadFileName = getName() + ".log";
+							Classifier.uploadToDropbox(resultfileName, uploadFileName);
+							
 							Classifier.constructJsonLog();
-						} catch (IOException e1) {
+						} catch (IOException | DbxException e1) {
 							e1.printStackTrace();
 						}
 						System.exit(EXIT_ON_CLOSE);
@@ -853,9 +861,17 @@ public class Window extends JFrame {
 							Classifier.jsonLog.addMovie(Classifier.currentMovie);
 							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
 							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
+							
 							Classifier.log.close();
+							String resultfileName = Classifier.absolutePath+"/output/"+ getName() + ".log";
+							String uploadFileName = getName() + ".log";
+							Classifier.uploadToDropbox(resultfileName, uploadFileName);
+							
 							Classifier.constructJsonLog();
 						} catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (DbxException e1) {
+							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 						System.exit(EXIT_ON_CLOSE);
@@ -897,9 +913,17 @@ public class Window extends JFrame {
 							Classifier.jsonLog.addMovie(Classifier.currentMovie);
 							Classifier.log.println(Classifier.getTime(Classifier.time) + " Application finished");
 							Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application finished"));
+							
 							Classifier.log.close();
+							String resultfileName = Classifier.absolutePath+"/output/"+ getName() + ".log";
+							String uploadFileName = getName() + ".log";
+							Classifier.uploadToDropbox(resultfileName, uploadFileName);
+							
 							Classifier.constructJsonLog();
 						} catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (DbxException e1) {
+							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 						System.exit(EXIT_ON_CLOSE);
@@ -925,10 +949,20 @@ public class Window extends JFrame {
 				Classifier.time = new Date();
 				Classifier.log.println(Classifier.getTime(Classifier.time) + " Application closed");
 				Classifier.jsonLog.addEvent(new Event(Classifier.getTime(Classifier.time), "Application closed"));
+				
 				Classifier.log.close();
+				String resultfileName = Classifier.absolutePath+"/output/"+ getName() + ".log";
+				String uploadFileName = getName() + ".log";
+				try {
+					Classifier.uploadToDropbox(resultfileName, uploadFileName);
+				} catch (DbxException | IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				try {
 					Classifier.constructJsonLog();
-				} catch (IOException e) {
+				} catch (IOException | DbxException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
