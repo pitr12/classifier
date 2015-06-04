@@ -39,9 +39,9 @@ public class Window extends JFrame {
 	private static Font globalPlainFontSmaller = new Font("Courier 10 Pitch", Font.PLAIN, 12);
 	private static Font MsgFont = new Font("Courier 10 Pitch", Font.BOLD, 20);
 	private static Font globalPlainFont = new Font("Courier 10 Pitch", Font.PLAIN, 24);
-	private static Font globalPlainFontBtn = new Font("Courier 10 Pitch", Font.PLAIN, 12);
+	private static Font globalPlainFontBtn = new Font("Courier 10 Pitch", Font.PLAIN, 20);
 	private static Font categorySmallLabelFont = new Font("Courier 10 Pitch", Font.PLAIN,16);
-	private static Font smallBoldFont = new Font("Courier 10 Pitch", Font.BOLD,16);
+	private static Font smallBoldFont = new Font("Courier 10 Pitch", Font.BOLD,20);
 	
 	//panels
 	private JPanel contentPane;
@@ -102,7 +102,7 @@ public class Window extends JFrame {
 		panel.setLayout(categoryLayout);
 		
 		JRadioButton button = new JRadioButton(name);
-		button.setFont(globalPlainFontSmaller);
+		button.setFont(globalPlainFont);
 		if(index == (Classifier.CATEGORY_COUNT - 1)){
 			button.setForeground(Color.GRAY);
 		}
@@ -790,7 +790,7 @@ public class Window extends JFrame {
 		footer.add(id);
 		
 		//button next 100
-		next = new JButton("1");
+		next = new JButton("100");
 		next.setFont(globalPlainFontBtn);
 		next.setBorder(new EmptyBorder(10,50,10,50));
 		next.addActionListener(new ActionListener() {
@@ -840,7 +840,7 @@ public class Window extends JFrame {
 		footer.add(next);
 		
 		//button next 200
-		next2 = new JButton("2");
+		next2 = new JButton("200");
 		next2.setFont(globalPlainFontBtn);
 		next2.setBorder(new EmptyBorder(10,50,10,50));
 		next2.addActionListener(new ActionListener() {
@@ -892,7 +892,7 @@ public class Window extends JFrame {
 		footer.add(next2);
 				
 		//button next 300
-		next3 = new JButton("3");
+		next3 = new JButton("300");
 		next3.setFont(globalPlainFontBtn);
 		next3.setBorder(new EmptyBorder(10,50,10,50));
 		next3.addActionListener(new ActionListener() {
