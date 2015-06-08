@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.JFileChooser;
 
@@ -20,7 +22,12 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import gui.Instructions;
 import gui.Window;
+
+
+
+
 
 
 
@@ -51,6 +58,7 @@ public class Classifier {
 	 public static Date time;
 	 public static Movie currentMovie;
 	public static Window gui_frame;
+	public static Instructions gui_instructions;
 	public static String absolutePath;
 	public static String[] categories = {"Technology","Mystery","Science","Catastrophic","Nature","Animals","Geography","Adventure","Environment","Traveling",
 		"Health","Drugs","Economics","Crime","Politics","Biography","Society","Religion","Culture","Psychology","Philosophy","Art and Artists","History",
@@ -64,15 +72,33 @@ public class Classifier {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					gui_frame = new Window();
-					gui_frame.setVisible(true);
-					createCategories();
+					gui_instructions = new Instructions();
+					gui_instructions.setVisible(true);
+					
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						  @Override
+						  public void run() {
+							  gui_instructions.setVisible(false);
+							  gui_frame = new Window();
+								gui_frame.setVisible(true);
+								createCategories();
+								try {
+									classify();
+								} catch (IOException | ParseException
+										| DbxException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+						  }
+						}, 60*1000);
+					
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
-		classify();
 	}
 	
 	public static void initDropBox() throws IOException, DbxException{
